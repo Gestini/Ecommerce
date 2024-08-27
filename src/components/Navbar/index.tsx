@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { FaShoppingCart, FaWhatsapp } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa";
 
 const Index = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -24,11 +27,11 @@ const Index = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 z-40 w-64 h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed flex flex-col justify-between top-0 right-0 z-40 w-64 h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
-        <div className=" p-[5px] px-[20px] flex justify-between border-b border-gray-300 mb-2">
-          Total
+        <div className=" p-[5px] pr-[20px] flex justify-between border-b border-gray-300 mb-2">
+          Carrito
         </div>
         <button
           onClick={toggleSidebar}
@@ -49,16 +52,37 @@ const Index = () => {
           </svg>
           <span className="sr-only">Close menu</span>
         </button>
-        <ul className="space-y-2 font-medium">
+        <ul className="space-y-1 font-medium h-full overflow-auto">
           <li>
-            <a href="#" className="flex items-center p-1 text-gray-900 rounded-lg ">
-              <span>
-                x1
-              </span>
-              <span className="">Dashboard</span>
+            <a href="#" className="flex items-center justify-between p-1 text-gray-900 rounded-lg gap-2 ">
+              <div className="flex justify-between items-center ">
+                <div className="bg-gray-200 h-[40px] w-[40px] mr-2 rounded-md"></div>
+                <div className="flex flex-col">
+                  <span className="text-[14px]">Dashboard</span>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 flex items-center justify-center  rounded-full bg-gray-200">
+                      <FaMinus className="text-[10px] text-gray-600" />
+                    </div>
+                    <span className="text-[14px]">x10</span>
+                    <div className="w-4 h-4 flex items-center justify-center  rounded-full bg-gray-200">
+                      <FaPlus className="text-[10px] text-gray-600" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <FaTrash className="text-[12px]" />
             </a>
           </li>
         </ul>
+
+        <div className=" p-[5px] pr-[20px] flex justify-between border-t border-gray-300 mb-2">
+          <span>
+            Total
+          </span>
+          <span>
+            $20000
+          </span>
+        </div>
         <div className="">
           <button className="flex items-center gap-2 p-2 bg-[#a0db8e] w-full mb-1 rounded-md text-white text-[16px] justify-center">Enviar con <FaWhatsapp /></button>
           <button className="block p-2 bg-[#a0db8e] w-full rounded-md text-white text-[16px]">Enviar pedido</button>
