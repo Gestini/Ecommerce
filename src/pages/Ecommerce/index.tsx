@@ -8,14 +8,14 @@ import "./Ecommerce.scss";
 
 const Hero = () => {
   return (
-    <>
+    <div className="mainlanding flex flex-col gap-14">
       <Navbar />
       <Herosection />
-      <Categories />
+      {/* <Categories /> */}
       <Product />
       <Whatsapp />
       <Footer />
-    </>
+    </div>
   );
 };
 
