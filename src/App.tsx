@@ -3,12 +3,8 @@ import './App.css'
 import Ecommerce from './pages/Ecommerce'
 
 function App() {
-
-
   return (
-    <>
-      <Ecommerce />
-    </>
+    <Ecommerce />
   )
 }
 
