@@ -1,10 +1,10 @@
 
 import './App.css'
-import Preview from './pages/Preview'
+import Router from './routes'
 
 function App() {
   return (
-    <Preview />
+    <Router />
   )
 }
 

@@ -1,0 +1,31 @@
+.Productsection {
+  // Asegúrate de que el fondo del contenedor sea blanco
+  background-color: #ffffff; // Fondo blanco para la sección
+
+  .Categoryproducts {
+    background: linear-gradient(
+      45deg,
+      rgba(0, 196, 204, 1) 0%,
+      rgba(32, 255, 169, 1) 25%,
+      rgba(159, 255, 121, 1) 50%,
+      rgba(100, 32, 255, 1) 75%,
+      rgba(125, 42, 231, 1) 100%
+    );
+    -webkit-background-clip: text; /* Aplica el gradiente solo al texto en WebKit */
+    background-clip: text;
+    color: transparent; /* Hace que el color del texto sea transparente para mostrar el gradiente */
+    transition: background 0.3s ease; /* Transición suave para el hover */
+  }
+}
+
+@media (max-width: 1500px) {
+  .Productsection {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cardproduct {
+    margin: 0 auto;
+  }
+}

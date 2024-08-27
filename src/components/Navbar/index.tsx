@@ -12,7 +12,7 @@ const Index = () => {
   };
 
   return (
-    <div className="sticky top-0"> 
+    <div className="sticky top-0 left-0  z-20">
       {/* Header */}
       <div className="h-[70px] p-[5px] px-[20px] shadow-md flex justify-between items-center relative bg-[white]">
         <img
@@ -27,7 +27,7 @@ const Index = () => {
 
       {/* Sidebar */}
       <div
-        className={`absolute flex flex-col justify-between top-0 right-0 z-40 w-64 h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        className={`absolute flex flex-col justify-between top-0 right-0 w-64 h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <div className=" p-[5px] pr-[20px] flex justify-between border-b border-gray-300 mb-2">

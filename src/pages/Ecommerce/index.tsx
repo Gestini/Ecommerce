@@ -8,14 +8,14 @@ import "./Ecommerce.scss";
 
 const Ecommerce = () => {
   return (
-    <>
+    <div className="w-full overflow-x-clip">
       <Navbar />
       <Herosection />
-      <Categories />
+      {/* <Categories /> */}
       <Product />
       <Whatsapp />
       <Footer />
-    </>
+    </div>
   );
 };
 

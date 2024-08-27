@@ -2,7 +2,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsApp = ({ telefono }: number) => {
   return (
-    <div className="fixed bottom-[10%] right-[7%] z-10">
+    <div className="fixed bottom-[10%] right-[7%]">
       <a
         className="w-full cursor-default"
         href={`https://wa.me/${telefono}`}

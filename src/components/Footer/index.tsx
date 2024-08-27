@@ -7,7 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [footerStyle, setFooterStyle] = React.useState(1);
+  const [footerStyle, setFooterStyle] = React.useState(4);
 
   const FooterData = {
     simpleFooter: [
@@ -117,7 +117,7 @@ const Footer = () => {
   return (
     <>
       {footerStyle === 1 && (
-        <footer className="bg-black shadow">
+        <footer className="bg-white shadow-2xl">
           <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-500 sm:text-center ">
               © {currentYear} <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
@@ -136,35 +136,33 @@ const Footer = () => {
       )}
 
       {footerStyle === 2 && (
-        <div className="containerBox">
-          <div className="containerContent w-full">
-            <footer className="bg-white rounded-lg shadow">
-              <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-                <div className="sm:flex sm:items-center sm:justify-between">
-                  <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <img src="https://cdn.discordapp.com/attachments/1277840522047656119/1277840553232437320/Capa_4.png?ex=66cea141&is=66cd4fc1&hm=be2057a0b0bae82afac739658e7b7a84147a2903baffdf406191c9a47cb2cad9&" className="h-8" alt="Flowbite Logo" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap ">Gestini</span>
-                  </a>
-                  <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
-                    {
-                      FooterData.simpleFooter.map((ele, ind) =>
-                        <li key={ind}>
-                          <a href={ele.path} className="hover:underline me-4 md:me-6">{ele.name}</a>
-                        </li>
-                      )
-                    }
-                  </ul>
-                </div>
-                <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center ">© {currentYear} <a href="gestini.com" className="hover:underline">Gestini</a>. All Rights Reserved.</span>
-              </div>
-            </footer>
+
+        <footer className="bg-white rounded-lg shadow-2xl">
+          <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div className="sm:flex sm:items-center sm:justify-between">
+              <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="https://cdn.discordapp.com/attachments/1277840522047656119/1277840553232437320/Capa_4.png?ex=66cea141&is=66cd4fc1&hm=be2057a0b0bae82afac739658e7b7a84147a2903baffdf406191c9a47cb2cad9&" className="h-8" alt="Flowbite Logo" />
+                <span className="self-center text-2xl font-semibold whitespace-nowrap ">Gestini</span>
+              </a>
+              <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
+                {
+                  FooterData.simpleFooter.map((ele, ind) =>
+                    <li key={ind}>
+                      <a href={ele.path} className="hover:underline me-4 md:me-6">{ele.name}</a>
+                    </li>
+                  )
+                }
+              </ul>
+            </div>
+            <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
+            <span className="block text-sm text-gray-500 sm:text-center ">© {currentYear} <a href="gestini.com" className="hover:underline">Gestini</a>. All Rights Reserved.</span>
           </div>
-        </div>
+        </footer>
+
       )}
 
       {footerStyle === 3 && (
-        <footer className="bg-white">
+        <footer className="bg-white shadow-2xl">
           <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
@@ -206,37 +204,37 @@ const Footer = () => {
 
       )}
 
-{footerStyle === 4 && (
-  <footer className="bg-white">
-    <div className="mx-auto w-full max-w-screen-xl">
-      <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-        {FooterData.footerBySectionBig.map((section, index) => (
-          <div key={index}>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">{section.title}</h2>
-            <ul className="text-gray-500 font-medium">
-              {section.links.map((link, linkIndex) => (
-                <li className="mb-4" key={linkIndex}>
-                  <a href={link.path} className="hover:underline">{link.name}</a>
-                </li>
+      {footerStyle === 4 && (
+        <footer className="bg-white shadow-2xl">
+          <div className="mx-auto w-full max-w-screen-xl">
+            <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+              {FooterData.footerBySectionBig.map((section, index) => (
+                <div key={index}>
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">{section.title}</h2>
+                  <ul className="text-gray-500 font-medium">
+                    {section.links.map((link, linkIndex) => (
+                      <li className="mb-4" key={linkIndex}>
+                        <a href={link.path} className="hover:underline">{link.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
+            <div className="px-4 py-6 bg-gray-100 md:flex md:items-center md:justify-between">
+              <span className="text-sm text-gray-500 sm:text-center">© {currentYear} Gestini. All Rights Reserved.</span>
+              <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+                {FooterData.social.map((socialItem, index) => (
+                  <a key={index} href={socialItem.path} className="text-gray-400 hover:text-gray-900">
+                    {socialItem.icon}
+                    <span className="sr-only">{socialItem.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-      <div className="px-4 py-6 bg-gray-100 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center">© {currentYear} Gestini. All Rights Reserved.</span>
-        <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-          {FooterData.social.map((socialItem, index) => (
-            <a key={index} href={socialItem.path} className="text-gray-400 hover:text-gray-900">
-              {socialItem.icon}
-              <span className="sr-only">{socialItem.name}</span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  </footer>
-)}
+        </footer>
+      )}
     </>
   );
 };
