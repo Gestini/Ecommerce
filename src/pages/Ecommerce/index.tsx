@@ -6,7 +6,7 @@ import Product from "../../components/Product";
 import Whatsapp from "../../components/Whatsapp";
 import "./Ecommerce.scss";
 
-const Hero = () => {
+const Ecommerce = () => {
   return (
     <>
       <Navbar />
@@ -19,4 +19,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Ecommerce;

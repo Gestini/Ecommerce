@@ -12,9 +12,9 @@ const Index = () => {
   };
 
   return (
-    <div>
+    <div className="sticky top-0"> 
       {/* Header */}
-      <div className="h-[70px] p-[5px] px-[20px] shadow-md flex justify-between items-center">
+      <div className="h-[70px] p-[5px] px-[20px] shadow-md flex justify-between items-center relative bg-[white]">
         <img
           src="https://cdn.discordapp.com/attachments/1277840522047656119/1277840553232437320/Capa_4.png?ex=66cea141&is=66cd4fc1&hm=be2057a0b0bae82afac739658e7b7a84147a2903baffdf406191c9a47cb2cad9&"
           alt="Logo"
@@ -27,7 +27,7 @@ const Index = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed flex flex-col justify-between top-0 right-0 z-40 w-64 h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        className={`absolute flex flex-col justify-between top-0 right-0 z-40 w-64 h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <div className=" p-[5px] pr-[20px] flex justify-between border-b border-gray-300 mb-2">

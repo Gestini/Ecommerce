@@ -1,10 +1,10 @@
 
 import './App.css'
-import Ecommerce from './pages/Ecommerce'
+import Preview from './pages/Preview'
 
 function App() {
   return (
-    <Ecommerce />
+    <Preview />
   )
 }
 
