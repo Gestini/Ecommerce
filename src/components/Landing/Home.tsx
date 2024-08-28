@@ -106,7 +106,7 @@ const Home = () => {
               <span>Empieza gratis</span>
               <FaMagic />
             </button>
-            <button className="descargawindow flex gap-2  font-[600] items-center px-[20px]  text-[#969996] rounded-lg border-[#969996] border-2 ">
+            <button className="descargawindow flex gap-2  font-[600] items-center px-[20px] py-[8px]  text-[#969996] rounded-lg border-[#969996] border-2 ">
               <span>Descargar para Windows</span>
             </button>
           </div>
