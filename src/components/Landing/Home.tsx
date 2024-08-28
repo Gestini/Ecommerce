@@ -26,6 +26,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 const Home = () => {
+  const slideItems = [
+    "Inteligencia Artificial (genis)",
+    "Gestion de depositos",
+    "Recursos humanos",
+    "Punto de Venta (POS)",
+    "Gestion de producto",
+  ];
+
+  const slideImages = [Amazon, Microsoft, Meli, GCloud, Shopify, Meli];
   return (
     <div className="home-landing relative w-full flex justify-center items-center h-screen pt-[68px]">
       <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 ">
@@ -70,31 +79,16 @@ const Home = () => {
             modules={[FreeMode, Pagination, Autoplay]}
             className="mySwipertop w-[1000px] "
           >
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <div className="slideitem  text-[13px] rounded-3xl font-[600] border-1 border-[#a0db8e52] px-[30px] py-[3px] text-[#5ABD3C]">
-                Inteligencia Artificial (genis)
-              </div>{" "}
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <div className="slideitem  text-[13px] rounded-3xl font-[600] border-1 border-[#a0db8e69] px-[30px] py-[3px] text-[#5ABD3C]">
-                Gestion de depositos
-              </div>{" "}
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <div className="slideitem  text-[13px] rounded-3xl font-[600] border-1 border-[#a0db8e69] px-[30px] py-[3px] text-[#5ABD3C]">
-                Recursos humanos
-              </div>{" "}
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <div className="slideitem  text-[13px] rounded-3xl font-[600] border-1 border-[#a0db8e69] px-[30px] py-[3px] text-[#5ABD3C]">
-                Punto de Venta (POS)
-              </div>{" "}
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <div className="slideitem  text-[13px] rounded-3xl font-[600] border-1 border-[#a0db8e69] px-[30px] py-[3px] text-[#5ABD3C]">
-                Gestion de producto
-              </div>{" "}
-            </SwiperSlide>
+            {slideItems.map((item, index) => (
+              <SwiperSlide
+                key={index}
+                className="slideitemdiv flex justify-center items-center"
+              >
+                <div className="slideitem text-[13px] rounded-3xl font-[600] border-1 border-[#a0db8e69] px-[30px] py-[3px] text-[#5ABD3C]">
+                  {item}
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
         <div className="titlemiddle-landing flex justify-center">
@@ -157,24 +151,18 @@ const Home = () => {
             modules={[FreeMode, Pagination, Autoplay]}
             className="mySwiper w-[1200px] "
           >
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <img src={Amazon} className=" w-[150px]  " alt="" />
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <img src={Microsoft} className=" w-[150px]  " alt="" />
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <img src={Meli} className=" w-[150px]  " alt="" />
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <img src={GCloud} className=" w-[150px]  " alt="" />
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <img src={Shopify} className=" w-[150px]  " alt="" />
-            </SwiperSlide>
-            <SwiperSlide className="slideitemdiv flex justify-center items-center ">
-              <img src={Meli} className=" w-[150px]  " alt="" />
-            </SwiperSlide>
+            {slideImages.map((src, index) => (
+              <SwiperSlide
+                key={index}
+                className="slideitemdiv flex justify-center items-center"
+              >
+                <img
+                  src={src}
+                  className="w-[150px]"
+                  alt={`Slide ${index + 1}`}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
