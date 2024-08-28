@@ -1,4 +1,4 @@
-import Categories from "../../components/Categories";
+import Filtros from "../../components/Filtros";
 import Footer from "../../components/Footer";
 import Herosection from "../../components/Hero/Herosection";
 import Navbar from "../../components/Navbar";
@@ -11,8 +11,11 @@ const Ecommerce = () => {
     <div className="w-full overflow-x-clip">
       <Navbar />
       <Herosection />
-      <Product />
-      <Whatsapp />
+      <div className="px-10">
+        <Filtros />
+        <Product />
+        <Whatsapp />
+      </div>
       <Footer />
     </div>
   );

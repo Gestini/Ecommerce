@@ -3,6 +3,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { GestinyLogo } from '../../assets/Logo';
 
 
 const Footer = () => {
@@ -141,7 +142,7 @@ const Footer = () => {
           <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div className="sm:flex sm:items-center sm:justify-between">
               <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="https://cdn.discordapp.com/attachments/1277840522047656119/1277840553232437320/Capa_4.png?ex=66cea141&is=66cd4fc1&hm=be2057a0b0bae82afac739658e7b7a84147a2903baffdf406191c9a47cb2cad9&" className="h-8" alt="Flowbite Logo" />
+                <GestinyLogo />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap ">Gestini</span>
               </a>
               <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
@@ -163,11 +164,11 @@ const Footer = () => {
 
       {footerStyle === 3 && (
         <footer className="bg-white shadow-2xl">
-          <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+          <div className="mx-auto w-full  p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
                 <a href="https://flowbite.com/" className="flex items-center">
-                  <img src="https://cdn.discordapp.com/attachments/1277840522047656119/1277840553232437320/Capa_4.png?ex=66cea141&is=66cd4fc1&hm=be2057a0b0bae82afac739658e7b7a84147a2903baffdf406191c9a47cb2cad9&" className="h-8 me-3" alt="Flowbite Logo" />
+                  <GestinyLogo />
                   <span className="self-center text-2xl font-semibold whitespace-nowrap ">Gestini</span>
                 </a>
               </div>
@@ -206,7 +207,7 @@ const Footer = () => {
 
       {footerStyle === 4 && (
         <footer className="bg-white shadow-2xl">
-          <div className="mx-auto w-full max-w-screen-xl">
+          <div className="mx-auto w-full ">
             <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
               {FooterData.footerBySectionBig.map((section, index) => (
                 <div key={index}>
