@@ -28,6 +28,11 @@ h1 {
   color: var(--text);
 }
 
+.animation {
+  transition: all;
+  transition-duration: 300ms;
+}
+
 input[type='color'] {
   -webkit-appearance: none;
   appearance: none;
@@ -103,6 +108,7 @@ textarea {
 
 table {
   color: #71717a;
+
   svg {
     font-size: 20px;
   }
