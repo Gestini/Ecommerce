@@ -1,31 +1,55 @@
+import { setFilteredProducts } from '@/features/products';
+import { RootState } from '@/store';
+import React from 'react'
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { useDispatch, useSelector } from 'react-redux';
 
 const index = () => {
-  const filters = [
-    {
-      name: 'Most recent',
-      active: true,
-    },
-    {
-      name: 'Lowest price',
-      active: false,
-    },
-    {
-      name: 'Higuest price',
-      active: false,
-    },
-  ]
+  const dispatch = useDispatch();
+  const products = useSelector((state: RootState) => state.products.data);
+  const [activeFilter, setActiveFilter] = React.useState('Todos');
+  const data = useSelector((state: RootState) => state.products);
 
+  const filters = [
+    { name: 'Todos', active: activeFilter === 'Todos' },
+    { name: 'Más reciente', active: activeFilter === 'Más reciente' },
+    { name: 'Menor precio', active: activeFilter === 'Menor precio' },
+    { name: 'Mayor precio', active: activeFilter === 'Mayor precio' },
+    { name: 'A-Z', active: activeFilter === 'A-Z' },
+  ];
+
+  const handleFilterChange = (nombreFiltro) => {
+    setActiveFilter(nombreFiltro);
+    let productosFiltrados;
+
+    switch (nombreFiltro) {
+      case 'Menor precio':
+        productosFiltrados = [...products].sort((a, b) => a.price - b.price);
+        break;
+      case 'Mayor precio':
+        productosFiltrados = [...products].sort((a, b) => b.price - a.price);
+        break;
+      case 'A-Z':
+        productosFiltrados = [...products].sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'Más reciente':
+      default:
+        productosFiltrados = [...products]; // Suponiendo que el orden original es por recencia
+        break;
+    }
+    dispatch(setFilteredProducts(productosFiltrados));
+  };
+  
   return (
     <div className="flex justify-between my-5 py-5 border-b border-b-gray-200">
       <div className="flex">
-        <span className="pr-5 h-[35px] border-r border-r-gray-200 flex items-center text-gray-500">32 of 32 products</span>
+        <span className="pr-5 h-[35px] border-r border-r-gray-200 flex items-center text-gray-500">{data.productsPerPage} of {data.totalPage} products</span>
         <span className="px-5 h-[35px] text-gray-400 flex items-center">Sort by:</span>
         <div className="flex gap-3">
           {
             filters.map((ele, ind) =>
-              <span key={ind} className={`px-3 cursor-pointer flex items-center ${ele.active ? 'bg-c-primary-variant-1 hover:bg-c-primary-variant-1' : 'bg-gray-300 hover:bg-c-primary-variant-2'}  transition duration-300 text-white rounded-xl`}>
+              <span key={ind} onClick={() => handleFilterChange(ele.name)} className={`px-3 cursor-pointer flex items-center ${ele.active ? 'bg-c-primary-variant-1 hover:bg-c-primary-variant-1' : 'bg-gray-300 hover:bg-c-primary-variant-2'}  transition duration-300 text-white rounded-xl`}>
                 {ele.name}
               </span>
             )

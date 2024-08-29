@@ -14,13 +14,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addProductToCart(product));
+    dispatch(addProductToCart({ product, quantity: 1 }));
   };
 
   const handleSetProduct = () => {
     dispatch(setCurrentProduct(product));
   };
-  
+
   return (
     <div className="relative bg-white shadow-shadowcard p-4 flex flex-col items-center rounded-lg hover:scale-105 transition duration-300">
       <div className="w-40 h-40 rounded-md overflow-hidden">
