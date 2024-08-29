@@ -1,95 +1,23 @@
 import React from "react";
 import Cuadrado from "../../assets/Herosection.png";
 import Mastiempo from "../../assets/mastiempo.png";
-import Amazon from "../../assets/Logos/Amazon.png";
-import GCloud from "../../assets/Logos/GCloud.png";
-import Microsoft from "../../assets/Logos/Microsoft.png";
-import Meli from "../../assets/Logos/Meli.png";
-import Shopify from "../../assets/Logos/Shopify.png";
+
 import { FaMagic } from "react-icons/fa";
 import { IoMdArrowDropright } from "react-icons/io";
 
 import "./Home.scss";
-// import Swiper core and required modules
-import { Swiper, SwiperSlide } from "swiper/react";
+import Slideemprendedores from "./sliders/Slideemprendedores";
+import Slideinfraestructura from "./sliders/Slideinfraestructura";
 
-import { FreeMode, Pagination, Autoplay } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 const Home = () => {
-  const slideItems = [
-    "Inteligencia Artificial (genis)",
-    "Gestion de depositos",
-    "Recursos humanos",
-    "Punto de Venta (POS)",
-    "Gestion de producto",
-  ];
-
-  const slideImages = [Amazon, Microsoft, Meli, GCloud, Shopify, Meli];
   return (
-    <div className="home-landing relative w-full flex justify-center items-center h-screen pt-[68px]">
+    <div className="home-landing relative w-full flex justify-center items-center min-h-screen  pt-[68px]">
       <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 ">
         <div className="Emprendedoresempresarios-landing flex flex-col gap-6">
           <h3 className=" text-[#b9b9b9] font-[600] text-center ">
             PARA EMPRENDEDORES Y EMPRESARIOS
           </h3>
-          <Swiper
-            slidesPerView={4}
-            spaceBetween={0}
-            freeMode={true}
-            pagination={false}
-            loop={true}
-            autoplay={{
-              delay: 700,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              // when window width is >= 320px
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              // when window width is >= 480px
-
-              // when window width is >= 640px
-              500: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-              },
-              700: {
-                slidesPerView: 4,
-                spaceBetween: 100,
-              },
-              // when window width is >= 1024px
-              1250: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-              // when window width is >= 1440px
-            }}
-            modules={[FreeMode, Pagination, Autoplay]}
-            className="mySwipertop w-[1000px] "
-          >
-            {slideItems.map((item, index) => (
-              <SwiperSlide
-                key={index}
-                className="slideitemdiv flex justify-center items-center"
-              >
-                <div className="slideitem text-[13px] rounded-3xl font-[600] border-1 border-[#a0db8e69] px-[30px] py-[3px] text-[#5ABD3C]">
-                  {item}
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <Slideemprendedores />
         </div>
         <div className="titlemiddle-landing flex justify-center">
           <img src={Mastiempo} className="mastimepologo w-[1000px] " alt="" />
@@ -110,60 +38,13 @@ const Home = () => {
           </h4>
         </div>
       </div>
-      <div className="bottomcontainer-landing absolute bottom-[50px] gap-6 flex flex-col justify-center items-center ">
+      <div className="bottomcontainer-landing absolute bottom-[50px] gap-[28px] flex flex-col justify-center items-center ">
         <div className="infoslider-landing flex gap-2 text-[#969996] items-center font-[500] ">
           <IoMdArrowDropright />
           <span>Infraestructura Segura e Innovadora</span>
         </div>
         <div className="sliderinfraestructura-landing ">
-          <Swiper
-            slidesPerView={4}
-            spaceBetween={50}
-            freeMode={true}
-            pagination={false}
-            loop={true}
-            autoplay={{
-              delay: 700,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              // when window width is >= 320px
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-              },
-
-              // when window width is >= 640px
-              500: {
-                slidesPerView: 3,
-                spaceBetween: 100,
-              },
-              700: {
-                slidesPerView: 4,
-                spaceBetween: 100,
-              },
-              // when window width is >= 1024px
-              1250: {
-                slidesPerView: 5,
-                spaceBetween: 30,
-              },
-            }}
-            modules={[FreeMode, Pagination, Autoplay]}
-            className="mySwiper w-[1200px] "
-          >
-            {slideImages.map((src, index) => (
-              <SwiperSlide
-                key={index}
-                className="slideitemdiv flex justify-center items-center"
-              >
-                <img
-                  src={src}
-                  className="w-[150px]"
-                  alt={`Slide ${index + 1}`}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <Slideinfraestructura />
         </div>
       </div>
     </div>
