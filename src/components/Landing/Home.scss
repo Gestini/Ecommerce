@@ -137,6 +137,18 @@
     display: none !important;
   }
   .containermiddle-landing {
-    margin-top: -50px !important;
+    margin-top: 0px !important;
+  }
+
+  .home-landing {
+    padding-top: 0px !important;
+  }
+
+  .containermiddle-landing{
+    gap: 80px !important;
+  }
+
+  .bottomiddle-landing {
+    gap: 30px !important;
   }
 }
