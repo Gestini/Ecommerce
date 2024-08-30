@@ -3,6 +3,7 @@ import { AiFillThunderbolt } from "react-icons/ai";
 import "./Genishelpsyou.scss";
 import { IoIosArrowForward } from "react-icons/io";
 
+
 const Genishelpsyou = () => {
   return (
     <div className="divcontainersection min-h-screen items-center  flex-col gap-[64px] mx-auto  flex  bg-[#FAFAFA] ">
