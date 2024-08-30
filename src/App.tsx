@@ -1,14 +1,10 @@
 
 import './App.css'
-import Ecommerce from './pages/Ecommerce'
+import Router from './routes'
 
 function App() {
-
-
   return (
-    <>
-      <Ecommerce />
-    </>
+    <Router />
   )
 }
 

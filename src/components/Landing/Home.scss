@@ -1,0 +1,142 @@
+.home-landing {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../assets/cuadrados.png");
+}
+
+.slideitemdiv {
+  width: 250px !important;
+}
+
+/* Estilos para pantallas con un ancho máximo de 1250px */
+@media (max-width: 1250px) {
+  .swiper {
+    width: 700px !important;
+  }
+
+  .slideitemdiv {
+    width: 160px !important;
+  }
+
+  .slideitem {
+    display: flex;
+    justify-content: center;
+    width: 200px !important;
+    font-size: 10px !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* Estilos para pantallas con un ancho máximo de 700px */
+@media (max-width: 700px) {
+  .navbar--landing {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+
+  .swiper {
+    width: 500px !important;
+  }
+
+  .mastimepologo {
+    width: 300px !important;
+  }
+
+  .empiezagratis {
+    font-size: 12px !important;
+  }
+
+  .descargawindow {
+    font-size: 12px !important;
+  }
+
+  .descriptionhome-landing {
+    font-size: 12px !important;
+  }
+}
+
+/* Estilos para pantallas con una altura máxima de 950px */
+@media (max-height: 850px) {
+  .mastimepologo {
+    width: 700px !important;
+  }
+
+  .containermiddle-landing {
+    margin-top: -150px !important;
+    gap: 0 !important;
+  }
+
+  .Emprendedoresempresarios-landing {
+    gap: 10px !important;
+  }
+
+  .descriptionhome-landing {
+    font-size: 15px !important;
+  }
+
+  .descargawindow {
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+  }
+
+  .empiezagratis {
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+  }
+}
+
+/* Estilos para pantallas con una altura máxima de 850px */
+@media (max-height: 850px) {
+  .mastimepologo {
+    width: 500px !important;
+  }
+
+  .bottomcontainer-landing {
+    bottom: 50px !important;
+  }
+}
+
+/* Estilos para pantallas con un ancho máximo de 550px */
+@media (max-width: 550px) {
+  .mySwipertop {
+    display: none !important;
+  }
+
+  .empiezagratis {
+    padding: 5px 10px !important;
+  }
+
+  .descargawindow {
+    padding: 5px 10px !important;
+  }
+
+  .mastimepologo {
+    width: 100% !important;
+  }
+
+  .der-navbar--landing {
+    font-size: 11px !important;
+    width: 200px !important;
+    gap: 0px !important;
+  }
+
+  .home-landing {
+    padding: 0 20px;
+  }
+
+  .containermiddle-landing {
+    gap: 50px !important;
+  }
+}
+
+/* Estilos para pantallas con un ancho máximo de 500px */
+@media (max-width: 500px) {
+  .bottomcontainer-landing {
+    display: none !important;
+  }
+  .containermiddle-landing {
+    margin-top: -50px !important;
+  }
+}
