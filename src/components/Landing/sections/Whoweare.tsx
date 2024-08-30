@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { BsAsterisk } from "react-icons/bs";
+import "./Whoweare.scss"
 
 const Whoweare = () => {
   const cards = [
@@ -43,9 +44,9 @@ const Whoweare = () => {
     // Agrega más objetos de cartas aquí
   ];
   return (
-    <div className="min-h-screen items-center  flex-col gap-[64px] mx-auto py-[100px] flex  bg-[#FAFAFA] ">
-      <div className="section flex flex-col gap-[64px] w-full max-w-[80%]  mx-auto ] ">
-        <div className="titlesection w-full flex flex-col gap-[20px] ">
+    <div className="divcontainersection min-h-screen items-center  flex-col gap-[64px] mx-auto flex  bg-[#FAFAFA] ">
+      <div className="section flex flex-col gap-[64px] w-full max-w-[80%]  mx-auto ]  ">
+        <div className="titlesection w-full flex flex-col gap-[20px] justify-center items-center ">
           <div className="buttonsecttionname w-full justify-center flex">
             <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] ">
               <AiFillThunderbolt /> Caracteristicas
@@ -55,7 +56,7 @@ const Whoweare = () => {
             Porque somos los <span className=" text-[#70C955] "> mejores!</span>
           </h2>
         </div>
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 p-4 gap-y-[64px] ">
+        <div className="gridcontainer grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 p-4 gap-y-[64px] ">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -64,10 +65,10 @@ const Whoweare = () => {
               <div className="w-[60px] h-[60px] flex justify-center bg-[#E0EDFA] rounded-lg items-center">
                 {card.icon}
               </div>
-              <h5 className="text-[24px] text-[#70C955] font-bold">
+              <h5 className="titulocardgrid-landing text-[24px] text-[#70C955] font-bold">
                 {card.title}
               </h5>
-              <span className="text-[15px] text-gray-700">
+              <span className="cardescriptiongrid-landing text-[15px] text-gray-700">
                 {card.description}
               </span>
             </div>

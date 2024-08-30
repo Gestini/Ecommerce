@@ -5,6 +5,8 @@ import Navbar from "../../components/Landing/Navbar";
 import Home from "../../components/Landing/Home";
 import FeaturesSection from "../../components/Landing/sections/Featuresection";
 import Whoweare from "../../components/Landing/sections/Whoweare";
+import Doitwithgenis from "@/components/Landing/sections/Doitwithgenis";
+import Genishelpsyou from "@/components/Landing/sections/genishelpsyou";
 
 const index = () => {
   return (
@@ -12,6 +14,8 @@ const index = () => {
       <Navbar />
       <Home />
       <Whoweare />
+      <Doitwithgenis />
+      <Genishelpsyou />
     </>
   );
 };
