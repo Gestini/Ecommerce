@@ -25,8 +25,9 @@ const ProductDetail = () => {
 
   return (
     product &&
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-lg w-[1000px] h-[450px] p-6 relative flex">
+    <div className="fixed top-0 left-0 w-full h-screen bg-opacity-50 flex items-center justify-center z-30">
+      <div onClick={closeDetail} className="absolute w-full h-screen inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20"></div>
+      <div className="relative top-0 left-0 bg-white rounded-lg shadow-lg w-[1000px] h-[450px] p-6 flex z-50">
         <button
           className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 p-2 hover:bg-gray-200 rounded-full animation"
           onClick={closeDetail}
