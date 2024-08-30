@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+.titlesectionh2 {
+  font-family: "Figtree", sans-serif;
+  font-size: clamp(20px, 3vw, 180px) !important;
+}
+
+.cardescriptiongrid-landing {
+  font-size: clamp(15px, 1.2vw, 18px) !important;
+   font-family: "Figtree"
+}
+
+.cardcaracterist {
+  width: clamp(300px, 25vw, 580px) !important;
+  padding-right: clamp(0px, 10vw, 20px) !important;
+  padding-left: clamp(0px, 10vw, 20px) !important;
+}
+
+.titulocardgrid-landing {
+  font-size: clamp(15px, 1.5vw, 30px) !important;
+   font-family: "Figtree"
+}
+.gridcontainer {
+  padding: 0 !important;
+}
+
+@media (max-width: 500px) {
+  .cardcaracterist {
+    padding: 0 !important;
+  }
+
+  .gridcontainer {
+    padding: 0 !important;
+  }
+
+  .cardcaracterist {
+    width: 100% !important;
+  }
+
+  .section {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-height: 800px) and (min-width : 800px)   {
+  .titlesection {
+    gap: 5px !important;
+  }
+  .section {
+    gap: 10px !important;
+  }
+  .cardcaracterist {
+    gap: 0.5rem !important;
+  }
+  .gridcontainer {
+    row-gap: 0px !important;
+  }
+}
+
+@media (max-height: 800px) {
+
+}

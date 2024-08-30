@@ -30,7 +30,7 @@ export const manageProductsSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
-        setCurrentProduct: (state, action: PayloadAction<Product>) => {
+        setCurrentProduct: (state, action) => {
             state.currentProduct = action.payload;
         },
         setProducts: (state, action: PayloadAction<Products>) => {

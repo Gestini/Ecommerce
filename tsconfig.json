@@ -1,6 +1,15 @@
 {
   "compilerOptions": {
+    "module": "es2020",
+    "target": "ES2021",
+    "lib": [
+      "DOM",
+      "ES2021"
+    ],
+    "strict": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
@@ -8,7 +17,8 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "moduleResolution": "node" // Asegúrate de tener esta línea
   },
   "include": [
     "src"

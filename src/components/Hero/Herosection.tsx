@@ -14,15 +14,15 @@ const Herosection = () => {
     dispatch(setProducts(ProductsDefault));
   }, [dispatch]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  const handleSearch = (e:any) => {
+    e.preventDefault()
     const filteredProducts = products.filter(product =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
     dispatch(setFilteredProducts(filteredProducts));
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e:any) => {
     dispatch(setSearchQuery(e.target.value));
   };
 

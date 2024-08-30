@@ -84,7 +84,6 @@ const Index = () => {
               disallowEmptySelection
               selectionMode="single"
               selectedKeys={selectedKeys}
-              onSelectionChange={setSelectedKeys}
             >
               {filters.map((ele, ind) => (
                 <DropdownItem key={ele.name}>{ele.name}</DropdownItem>

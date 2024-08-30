@@ -1,0 +1,15 @@
+.genisayuda {
+  max-width: clamp(0px, 60vw, 2180px) !important;
+}
+
+.barritasearch {
+  height: clamp(45px, 6vw, 72px) !important;
+}
+
+
+@media (max-width: 500px){
+    .genisayuda{
+        max-width: 100% !important;
+    }
+}
+
