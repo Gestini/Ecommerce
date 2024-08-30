@@ -27,26 +27,26 @@ const ProductDetail = () => {
     product &&
     <div className="fixed top-0 left-0 w-full h-screen bg-opacity-50 flex items-center justify-center z-30">
       <div onClick={closeDetail} className="absolute w-full h-screen inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20"></div>
-      <div className="relative top-0 left-0 bg-white rounded-lg shadow-lg w-[1000px] h-[450px] p-6 flex z-50">
+      <div className="relative overflow-y-auto bg-white rounded-lg shadow-lg h-screen w-full lg:w-[1000px] items-center lg:h-[450px] p-3 sm:6 md:flex flex-row z-50">
         <button
-          className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 p-2 hover:bg-gray-200 rounded-full animation"
+          className="absolute top-1 right-1 sm:top-6 sm:right-6 text-gray-600 hover:text-gray-800 p-2 hover:bg-gray-200 rounded-full animation"
           onClick={closeDetail}
         >
           <IoMdClose size={24} />
         </button>
-        <div className="w-1/2 overflow-hidden">
+        <div className="h-[300px] w-[100%]  lg:w-1/2 overflow-hidden">
           <img
             src={product.image}
             alt={product.name}
             className="w-full h-full object-contain object-center rounded-md"
           />
         </div>
-        <div className="w-1/2 pl-6 flex flex-col justify-between">
+        <div className="w-full pt-5 lg:w-1/2 lg:pl-6 flex flex-col justify-center lg:justify-between">
           <div>
             <h3 className="text-3xl font-semibold mb-2">{product.name}</h3>
             <p className="text-gray-800 text-xl font-bold text-[22px]">${product.price?.toFixed(2)}</p>
             <p className="text-red-600 mb-2 font-bold text-[17px]">20% OFF</p>
-            <p className="text-gray-700 mb-4 h-[100px] text-[15px] text overflow-auto">
+            <p className="text-gray-700 mb-4 lg:h-[100px] text-[15px] text overflow-auto">
               {product.description || 'Sin descripción'}
             </p>
             <p className="text-[15px] mb-2">Color: <strong>Celeste</strong></p>

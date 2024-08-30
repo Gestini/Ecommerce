@@ -37,7 +37,9 @@ export default {
         'shadowcard': 'rgba(0, 0, 0, 0.16) 0px 1px 4px'
       },
       screens: {
-        "2xl": "1536px", // Punto de quiebre para pantallas muy grandes
+        "ssm": "400px",
+        "sim": "550px",
+        "2xl": "1536px",
       },
     },
   },

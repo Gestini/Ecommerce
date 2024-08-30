@@ -11,7 +11,7 @@ const Ecommerce = () => {
     <div className="w-full overflow-x-clip">
       <Navbar />
       <Herosection />
-      <div className="px-10">
+      <div className="px-5 ssm:px-10">
         <Filtros />
         <Product />
         <Whatsapp />

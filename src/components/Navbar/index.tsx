@@ -66,7 +66,7 @@ const Index = () => {
 
         {/* Sidebar */}
         <div
-          className={`absolute flex flex-col justify-between top-0 right-0 w-64 h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute flex flex-col justify-between top-0 right-0 w-full ssm:w-64  h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
           <div className="p-[5px] pr-[20px] flex justify-between border-b border-gray-300 mb-2">
