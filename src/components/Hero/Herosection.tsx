@@ -14,7 +14,7 @@ const Herosection = () => {
     dispatch(setProducts(ProductsDefault));
   }, [dispatch]);
 
-  const handleSearch = (e) => {
+  const handleSearch = (e:any) => {
     e.preventDefault()
     const filteredProducts = products.filter(product =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase())

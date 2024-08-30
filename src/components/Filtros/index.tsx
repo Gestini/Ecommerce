@@ -19,7 +19,7 @@ const index = () => {
     { name: 'A-Z', active: activeFilter === 'A-Z' },
   ];
 
-  const handleFilterChange = (nombreFiltro) => {
+  const handleFilterChange = (nombreFiltro:any) => {
     setActiveFilter(nombreFiltro);
     let productosFiltrados;
 

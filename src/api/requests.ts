@@ -61,12 +61,12 @@ export const reqEditRole = async (id: any, data: any) => api.put(`/role/${id}`, 
 export const reqDeleteRole = async (id: any) => api.delete(`/role/${id}`)
 export const reqGetRoletByUnit = async (id: any) => api.get(`/role/get-by-unit/${id}`)
 export const reqAddPermissionRole = async (data: any) => api.post('/role/add-perms', data)
-export const reqRemovePermissionRole = async (roleId: any, permissionId) =>
+export const reqRemovePermissionRole = async (roleId: any, permissionId:any) =>
   api.post(`/role/remove-perms/${roleId}/${permissionId}`)
 export const reqAddRoleUser = async (data: any) => api.post('/role/add-user', data)
 export const reqRemoveRoleUser = async (roleId: any, userId: any) =>
   api.delete(`/role/remove-user/${roleId}/${userId}`)
-export const reqUserHasPermissions = ({ unitId, permissionName }) =>
+export const reqUserHasPermissions = ({ unitId, permissionName }:any) =>
   api.get(`/role/has-permissions/${unitId}/${permissionName}`)
 
 /* Rutas empleados */

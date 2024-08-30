@@ -1,6 +1,6 @@
 import { FaWhatsapp } from 'react-icons/fa';
 
-const WhatsApp = ({ telefono }: number) => {
+const WhatsApp = ({ telefono }: any) => {
   return (
     <div className="fixed bottom-[10%] right-[7%]">
       <a

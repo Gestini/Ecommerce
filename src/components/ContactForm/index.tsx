@@ -4,7 +4,7 @@ import React from 'react'
 import { IoMdClose } from 'react-icons/io';
 import { useSelector } from 'react-redux';
 
-const ContactForm = ({ setContactForm }) => {
+const ContactForm = ({ setContactForm }:any) => {
     const cart = useSelector((state: RootState) => state.cart.data);
     const [formData, setFormData] = React.useState<FormData>({
         email: '',
