@@ -2,14 +2,12 @@
   text-align: center;
   font-size: clamp(30px, 10vw, 180px) !important;
   font-weight: 600 !important;
-  font-family: "Figtree"
+  font-family: "Figtree";
 }
 
-.divcontainersection {
-  padding-top: clamp(40px, 4vw, 180px) !important;
+.section {
+  padding-top: clamp(20px, 2vw, 180px) !important;
 }
-
-
 
 .doitwith-genis p span {
   color: #70c955; /* Color del texto */
