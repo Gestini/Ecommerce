@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import Preview from "../pages/Preview";
-import Ecommerce from "../pages/Ecommerce";
-import Landing from "../pages/Landing";
+import Preview from "@/pages/Preview";
+import Ecommerce from "@/pages/Ecommerce";
+import Landing from "@/pages/Landing";
+import AllEcommerce from"@/pages/AllEcommerce"
 import React from "react";
 import { Unit } from "@/types/Unit";
 import { reqGetUnitsByEcommerce } from "@/api/requests";
@@ -30,6 +31,7 @@ const Router = () => {
           < Route path={`/store/${ele.link}`} element={<Ecommerce unit={ele} />} />
         )
       }
+      <Route path="/ecommerce" element={<AllEcommerce/>} />
       <Route path="/dashboard" element={<Preview />} />
     </Routes>
   );
