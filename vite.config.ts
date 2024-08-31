@@ -10,7 +10,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000, // O el puerto que prefieras
+    port: 4000, // O el puerto que prefieras
     open: true, // Abre el navegador automáticamente
   },
   build: {
