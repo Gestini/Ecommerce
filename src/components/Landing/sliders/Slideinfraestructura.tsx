@@ -55,7 +55,7 @@ const Slideinfraestructura = () => {
         },
       }}
       modules={[FreeMode, Pagination, Autoplay]}
-      className="mySwiper w-[1200px] "
+      className="mySwiper swiperrr w-[1200px] "
     >
       {slideImages.map((src, index) => (
         <SwiperSlide
