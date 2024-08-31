@@ -6,15 +6,13 @@ import { useState } from "react";
 import { FaMinus, FaPlus, FaShoppingCart, FaTrash, FaWhatsapp } from "react-icons/fa";
 import { IoMdClose } from 'react-icons/io';
 import { useDispatch, useSelector } from "react-redux";
-import { GestinyLogo } from "../../assets/Logo";
-
 
 const Index = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state: RootState) => state.cart.data);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isContactForm, setContactForm] = useState(false);
-  const currentUnit = useSelector((state: RootState) => state.unit);
+  const currentUnit = useSelector((state: any) => state.unit);
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
@@ -53,10 +51,7 @@ const Index = () => {
       <div className="sticky top-0 left-0 z-20">
         {/* Header */}
         <div className="h-[70px] p-[5px] px-10 shadow-md flex justify-between items-center relative bg-[white]">
-          {
-            <img className='w-[40px] height-[40px]' src={currentUnit?.image} alt="" /> ||
-            <GestinyLogo />
-          }
+          <img className='w-[40px] height-[40px]' src={currentUnit?.image} alt="" />
           <button onClick={toggleSidebar} className="w-[40px] relative h-[40px] flex justify-center items-center bg-c-primary-variant-1 rounded-full">
             <FaShoppingCart className="text-white" />
             <span className="absolute top-[-5px] right-[-5px] text-[12px] font-bold text-white bg-orange-500 rounded-full w-[20px] h-[20px] flex items-center justify-center">

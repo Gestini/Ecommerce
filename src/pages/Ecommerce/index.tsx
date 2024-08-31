@@ -1,4 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { setUnit } from '@/features/currentUnitSlice'; // Asegúrate de que esta ruta sea correcta
+import { Unit } from '@/types/Unit';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import Filtros from '../../components/Filtros';
 import Footer from '../../components/Footer';
 import Herosection from '../../components/Hero/Herosection';
@@ -6,10 +9,6 @@ import Navbar from '../../components/Navbar';
 import Product from '../../components/Product';
 import Whatsapp from '../../components/Whatsapp';
 import './Ecommerce.scss';
-import { setUnit } from '@/features/currentUnitSlice'; // Asegúrate de que esta ruta sea correcta
-import React from 'react';
-import { RootState } from '@/store'; // Asegúrate de que esta ruta sea correcta
-import { Unit } from '@/types/Unit';
 
 interface EcommerceProps {
   unit: Unit;

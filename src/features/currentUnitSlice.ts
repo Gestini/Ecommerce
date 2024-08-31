@@ -1,11 +1,24 @@
-import { createSlice } from '@reduxjs/toolkit'
+// src/features/unitSlice.ts
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Unit } from '@/types/Unit';
 
-export const manageCurrentUnit = createSlice({
-  name: 'currentUnit',
-  initialState: null,
+interface UnitState {
+  currentUnit: Unit | null;
+}
+
+const initialState: UnitState = {
+  currentUnit: null,
+};
+
+const unitSlice = createSlice({
+  name: 'unit',
+  initialState,
   reducers: {
-    setUnit: (_, action) => action.payload,
+    setUnit(state, action: PayloadAction<Unit | null>) {
+      state.currentUnit = action.payload;
+    },
   },
-})
+});
 
-export const { setUnit } = manageCurrentUnit.actions
+export const { setUnit } = unitSlice.actions;
+export default unitSlice.reducer;
