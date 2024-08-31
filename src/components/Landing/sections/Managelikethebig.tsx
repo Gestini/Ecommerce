@@ -14,7 +14,7 @@ import { Navigation } from "swiper/modules";
 const Managelikethebig = () => {
   return (
     <div className="divcontainersection min-h-screen items-center  flex-col gap-[64px] mx-auto  flex  bg-[#FAFAFA] ">
-      <div className="section flex flex-col  w-full max-w-[100%] gap-[40px]  mx-auto ] ">
+      <div className="section flex flex-col min-h-screen w-full max-w-[100%] gap-[40px]  mx-auto ] ">
         <div className="titlesection justify-center items-center w-full flex flex-col gap-[20px] ">
           <div className="buttonsecttionname w-full justify-center flex">
             <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] ">
@@ -31,9 +31,9 @@ const Managelikethebig = () => {
           navigation={true}
           spaceBetween={30}
           modules={[Navigation]}
-          className="mySwiper w-full  "
+          className="mySwiper flex-grow flex w-full items-center justify-center  "
         >
-          <SwiperSlide className=" ">
+          <SwiperSlide className="  flex-grow  flex justify-center items-center ">
             {" "}
             <div className="gridboxes--landing w-full justify-center h-[400px] flex gap-4 max-w-[100%]  ">
               <div className="boxesizq flex  gap-4 w-1/2">

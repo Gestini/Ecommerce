@@ -8,16 +8,19 @@ import Whoweare from "../../components/Landing/sections/Whoweare";
 import Doitwithgenis from "@/components/Landing/sections/Doitwithgenis";
 import Genishelpsyou from "@/components/Landing/sections/Genishelpsyou";
 import Managelikethebig from "@/components/Landing/sections/Managelikethebig";
+import Yourmodel from "@/components/Landing/sections/Yourmodel";
 
 const index = () => {
   return (
     <>
       <Navbar />
+
       <Home />
       <Managelikethebig />
       <Whoweare />
       <Doitwithgenis />
       <Genishelpsyou />
+      <Yourmodel />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { BsAsterisk } from "react-icons/bs";
-import "./Whoweare.scss"
+import "./Whoweare.scss";
 
 const Whoweare = () => {
   const cards = [
@@ -45,7 +45,7 @@ const Whoweare = () => {
   ];
   return (
     <div className="divcontainersection min-h-screen items-center  flex-col gap-[64px] mx-auto flex  bg-[#FAFAFA] ">
-      <div className="section flex flex-col gap-[64px] w-full max-w-[80%]  mx-auto ]  ">
+      <div className="section min-h-screen flex flex-col gap-[64px] w-full max-w-[80%]  mx-auto ]  ">
         <div className="titlesection w-full flex flex-col gap-[20px] justify-center items-center ">
           <div className="buttonsecttionname w-full justify-center flex">
             <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] ">
@@ -56,7 +56,7 @@ const Whoweare = () => {
             Porque somos los <span className=" text-[#70C955] "> mejores!</span>
           </h2>
         </div>
-        <div className="gridcontainer grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 p-4 gap-y-[64px] ">
+        <div className="gridcontainer flex-grow grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 p-4 gap-y-[64px] ">
           {cards.map((card, index) => (
             <div
               key={index}
