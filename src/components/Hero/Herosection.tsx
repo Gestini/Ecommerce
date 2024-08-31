@@ -2,13 +2,13 @@ import React from "react";
 import "./Herosection.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
-import { setFilteredProducts, setProducts } from "@/features/products";
+import { setFilteredProducts, setSearchQuery, setProducts } from "@/features/products";
 import ProductsDefault from './product.json';
 
 const Herosection = () => {
   const dispatch = useDispatch();
   const products = useSelector((state: RootState) => state.products.data);
-  const [searchQuery, setSearchQuery] = React.useState("");
+  const searchQuery = useSelector((state: RootState) => state.products.searchQuery);
 
   React.useEffect(() => {
     dispatch(setProducts(ProductsDefault));
@@ -22,6 +22,9 @@ const Herosection = () => {
     dispatch(setFilteredProducts(filteredProducts));
   };
 
+  const handleInputChange = (e:any) => {
+    dispatch(setSearchQuery(e.target.value));
+  };
 
   return (
     <div className="hero__main-section mb-4">
@@ -34,17 +37,17 @@ const Herosection = () => {
             Tecnología de vanguardia
           </div>
         </div>
-        <form onSubmit={(e) => handleSearch(e)} className="input__section-hero max-w-[600px] w-full h-[60px] bg-white rounded-md flex ">
+        <form onSubmit={handleSearch} className="w-[90%] input__section-hero max-w-[600px] sm:w-full h-[50px] sm:h-[60px] bg-white rounded-md flex shadow-2xl">
           <div className="search__input-hero h-full flex-grow">
             <input
               type="text"
               placeholder="Buscar..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="h-full text-[16px] w-full p-3 px-5 outline-none rounded-lg text-gray-600  "
+              onChange={handleInputChange}
+              className="h-full text-[16px] w-full p-3 sm:px-5 outline-none rounded-lg text-gray-600"
             />
           </div>
-          <div className="action__box-hero w-[150px] flex justify-center items-center gap-3 p-3 border-l-2">
+          <div className="action__box-hero w-[100px] p-2 sm:w-[150px] flex justify-center items-center gap-3 sm:p-3 border-l-2">
             <button type="submit" className="bg-c-primary-variant-1 h-full w-full text-white font-[500] rounded-lg hover:bg-c-primary-variant-2 transition duration-300">
               Search
             </button>

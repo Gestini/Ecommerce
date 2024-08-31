@@ -1,0 +1,51 @@
+.titleherramientas {
+  max-width: clamp(320px, 50vw, 2180px) !important;
+}
+
+.gridboxes--landing {
+  height: clamp(0px, 30vw, 680px) !important;
+}
+
+.swiper-button-prev {
+  color: rgb(165, 165, 165);
+}
+
+.swiper-button-next {
+  color: rgb(165, 165, 165);
+}
+
+@media (max-width: 1250px) {
+  .gridboxes--landing {
+    flex-direction: column !important;
+    height: auto !important;
+    align-items: center;
+  }
+  .boxesmiddle--landing {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  .boxesizq {
+    width: auto !important;
+  }
+  .boxesmiddle--landing {
+    width: 100% !important;
+  }
+  .boxtop-landing {
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .boxizq-landing {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  .boxder-landing {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  .boxesizq {
+    width: 100% !important;
+  }
+  .boxesder {
+    width: 100% !important;
+  }
+}

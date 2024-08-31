@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Product, Products } from '@/types/Products';
+import { RootState } from '@/store';
 
 interface ProductsState {
     data: Products;
@@ -8,6 +9,9 @@ interface ProductsState {
     productsPerPage: number;
     totalPage: number;
     currentPage: number;
+    activeFilter: string;
+    searchResults: Products;
+    searchQuery: string,
 }
 
 const initialState: ProductsState = {
@@ -15,32 +19,39 @@ const initialState: ProductsState = {
     filteredData: [],
     currentProduct: null,
     productsPerPage: 5,
-    totalPage: 0, // Número total de páginas
-    currentPage: 0, // Página actual (empezando desde 0)
+    totalPage: 0,
+    currentPage: 0,
+    activeFilter: 'Todos',
+    searchResults: [],
+    searchQuery: ''
 };
 
 export const manageProductsSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
-        setCurrentProduct: (state, action: PayloadAction<Product>) => {
+        setCurrentProduct: (state, action) => {
             state.currentProduct = action.payload;
         },
         setProducts: (state, action: PayloadAction<Products>) => {
             state.data = action.payload;
             state.filteredData = action.payload;
-            state.totalPage = Math.ceil(action.payload.length / state.productsPerPage); // Calcula el número total de páginas
+            state.searchResults = action.payload;
+            state.totalPage = Math.ceil(action.payload.length / state.productsPerPage);
+        },
+        setSearchQuery: (state, action) => {
+            state.searchQuery = action.payload;
         },
         setCurrentPage: (state, action: PayloadAction<number>) => {
             const newPage = action.payload;
             if (newPage >= 0 && newPage < state.totalPage) {
-                state.currentPage = newPage; // Cambia a la página seleccionada si es válida
+                state.currentPage = newPage;
             }
         },
         setFilteredProducts: (state, action: PayloadAction<Products>) => {
             state.filteredData = action.payload;
-            state.totalPage = Math.ceil(action.payload.length / state.productsPerPage); // Actualiza el número total de páginas
-            state.currentPage = 0; // Reinicia a la primera página al filtrar
+            state.totalPage = Math.ceil(action.payload.length / state.productsPerPage);
+            state.currentPage = 0;
         },
         addProduct: (state, action: PayloadAction<Product>) => {
             const newProduct = action.payload;
@@ -50,7 +61,7 @@ export const manageProductsSlice = createSlice({
             } else {
                 state.data.push({ ...newProduct, quantity: 1 });
             }
-            state.totalPage = Math.ceil(state.data.length / state.productsPerPage); // Actualiza el número total de páginas
+            state.totalPage = Math.ceil(state.data.length / state.productsPerPage);
         },
         decreaseProductQuantity: (state, action: PayloadAction<number>) => {
             const productId = action.payload;
@@ -64,12 +75,43 @@ export const manageProductsSlice = createSlice({
             const productId = action.payload;
             state.data = state.data.filter(product => product.id !== productId);
             state.filteredData = state.filteredData.filter(product => product.id !== productId);
-            state.totalPage = Math.ceil(state.filteredData.length / state.productsPerPage); // Actualiza el número total de páginas
-            state.currentPage = 0; // Reinicia a la primera página al eliminar un producto
+            state.totalPage = Math.ceil(state.filteredData.length / state.productsPerPage);
+            state.currentPage = 0;
+        },
+        applyFilter: (state, action: PayloadAction<string>) => {
+            state.activeFilter = action.payload;
+            let productosFiltrados = [...state.filteredData];
+
+            switch (action.payload) {
+                case 'Menor precio':
+                    productosFiltrados = productosFiltrados.sort((a, b) => a.price - b.price);
+                    break;
+                case 'Mayor precio':
+                    productosFiltrados = productosFiltrados.sort((a, b) => b.price - a.price);
+                    break;
+                case 'A-Z':
+                    productosFiltrados = productosFiltrados.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case 'Más reciente':
+                default:
+                    break;
+            }
+
+            state.filteredData = productosFiltrados;
+            state.totalPage = Math.ceil(productosFiltrados.length / state.productsPerPage);
+            state.currentPage = 0;
         },
     },
 });
 
-export const { setCurrentProduct, decreaseProductQuantity, setProducts, setCurrentPage, setFilteredProducts, addProduct, removeProduct } = manageProductsSlice.actions;
+// Selector para obtener los productos a mostrar en la página actual
+export const selectProductsToDisplay = (state: RootState) => {
+    const { currentPage, productsPerPage, filteredData } = state.products;
+    const startIdx = currentPage * productsPerPage;
+    const endIdx = startIdx + productsPerPage;
+    return filteredData.slice(startIdx, endIdx);
+};
+
+export const { setCurrentProduct, decreaseProductQuantity, setSearchQuery, setProducts, setCurrentPage, setFilteredProducts, addProduct, removeProduct, applyFilter } = manageProductsSlice.actions;
 
 export default manageProductsSlice.reducer;

@@ -59,7 +59,7 @@ const Slideemprendedores = () => {
         // when window width is >= 1440px
       }}
       modules={[FreeMode, Pagination, Autoplay]}
-      className="mySwipertop w-[1000px] "
+      className="mySwipertop swiperrr w-[1000px] "
     >
       {slideItems.map((item, index) => (
         <SwiperSlide

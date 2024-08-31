@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import "./Navbar.scss"
+import "./Navbar.scss";
+import { GestinyLogo } from "../../assets/Logo";
 
 const Navbar = () => {
   return (
@@ -8,10 +9,7 @@ const Navbar = () => {
       <div className="izq-navbar--landing flex ">
         <div className="logo--landing  ">
           {" "}
-          <img
-            src="https://cdn.discordapp.com/attachments/1277840522047656119/1277840553232437320/Capa_4.png?ex=66cea141&is=66cd4fc1&hm=be2057a0b0bae82afac739658e7b7a84147a2903baffdf406191c9a47cb2cad9&"
-            alt=""
-          />{" "}
+          <GestinyLogo />
         </div>
       </div>
       <div className="items-navbar--landing flex flex-grow px-[50px] gap-4 ">
@@ -36,7 +34,9 @@ const Navbar = () => {
         <div className="item-navbar--landing  gap-2 flex justify-center items-center text-[#9b9b9b]">
           <span className=" font-[500] ">Iniciar Sesion </span>
         </div>
-        <button className="  bg-[#A0DB8E] px-[20px] py-[10px] rounded-lg font-[600] ">Empieza gratis</button>
+        <button className="  bg-[#A0DB8E] px-[20px] py-[10px] rounded-lg font-[600] ">
+          Empieza gratis
+        </button>
       </div>
     </div>
   );

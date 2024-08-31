@@ -47,18 +47,18 @@ const ContactForm = ({ setContactForm }:any) => {
     return (
         <div className="fixed top-0 left-0 w-full h-screen bg-opacity-50 flex items-center justify-center z-30">
             <div className="absolute w-full h-screen inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20" onClick={() => setContactForm(false)}></div>
-            <div className="relative top-0 left-0 bg-white rounded-lg shadow-lg p-6 px-12 flex z-50">
+            <div className="relative h-full w-full p-5 sim:h-auto sim:w-auto top-0 left-0 bg-white rounded-lg shadow-lg sim:p-6 sim:px-12 flex z-50">
                 <button
-                    className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 p-2 hover:bg-gray-200 rounded-full animation"
+                    className="absolute top-1 right-1 sim:top-4 sim:right-4 text-gray-600 hover:text-gray-800 p-2 hover:bg-gray-200 rounded-full animation"
                     onClick={() => setContactForm(false)}
                 >
                     <IoMdClose size={24} />
                 </button>
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                <form onSubmit={handleSubmit} className="w-full sim:max-w-md sim:mx-auto">
                     <div className='mb-3 text-[17px] font-semibold text-gray-500 text-center'>Orden - N° #101215</div>
 
                     {/* Email */}
-                    <div className="relative z-0 mb-5 w-[400px] group">
+                    <div className="relative z-0 mb-5 w-full sim:w-[400px] group ">
                         <input
                             type="email"
                             name="email"

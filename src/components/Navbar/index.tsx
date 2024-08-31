@@ -6,14 +6,13 @@ import { useState } from "react";
 import { FaMinus, FaPlus, FaShoppingCart, FaTrash, FaWhatsapp } from "react-icons/fa";
 import { IoMdClose } from 'react-icons/io';
 import { useDispatch, useSelector } from "react-redux";
-import { GestinyLogo } from "../../assets/Logo";
-
 
 const Index = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state: RootState) => state.cart.data);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isContactForm, setContactForm] = useState(false);
+  const currentUnit = useSelector((state: any) => state.unit);
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
@@ -47,15 +46,12 @@ const Index = () => {
     return cart.reduce((total, product) => total + product.price * product.quantity, 0);
   };
 
-
-
-
   return (
     <>
       <div className="sticky top-0 left-0 z-20">
         {/* Header */}
         <div className="h-[70px] p-[5px] px-10 shadow-md flex justify-between items-center relative bg-[white]">
-          <GestinyLogo />
+          <img className='w-[40px] height-[40px]' src={currentUnit?.image} alt="" />
           <button onClick={toggleSidebar} className="w-[40px] relative h-[40px] flex justify-center items-center bg-c-primary-variant-1 rounded-full">
             <FaShoppingCart className="text-white" />
             <span className="absolute top-[-5px] right-[-5px] text-[12px] font-bold text-white bg-orange-500 rounded-full w-[20px] h-[20px] flex items-center justify-center">
@@ -66,7 +62,7 @@ const Index = () => {
 
         {/* Sidebar */}
         <div
-          className={`absolute flex flex-col justify-between top-0 right-0 w-64 h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute flex flex-col justify-between top-0 right-0 w-full ssm:w-64  h-screen p-4 shadow-md overflow-y-auto bg-white transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
           <div className="p-[5px] pr-[20px] flex justify-between border-b border-gray-300 mb-2">
@@ -116,7 +112,6 @@ const Index = () => {
       </div>
       {isContactForm && <ContactForm setContactForm={setContactForm} />}
     </>
-
   );
 };
 
