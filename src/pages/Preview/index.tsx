@@ -1,9 +1,13 @@
 import React from "react";
 import Ecommerce from "../Ecommerce";
+import { Unit } from '@/types/Unit'; // Ensure this path is correct
+
+
+
 
 const index = () => {
   const unit: Unit = {
-    id: "example-id",
+    id: 1,
     name: "Example Unit",
     // Agrega otros campos necesarios de acuerdo al tipo Unit
   };
