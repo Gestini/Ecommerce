@@ -9,8 +9,51 @@ import { IoMdArrowDropright } from "react-icons/io";
 import "./Home.scss";
 import Slideemprendedores from "./sliders/Slideemprendedores";
 import Slideinfraestructura from "./sliders/Slideinfraestructura";
+import SliderEmprendedores from "./sliders/SliderEmprendedores";
+import Amazon from "../../assets/Logos/Amazon.png";
+import GCloud from "../../assets/Logos/GCloud.png";
+import Meli from "../../assets/Logos/Meli.png";
+import Microsoft from "../../assets/Logos/Microsoft.png";
+import Shopify from "../../assets/Logos/Shopify.png";
+import Carousel from "./sliders/Slidertools";
 
 const Home = () => {
+  const imageList = [
+    {
+      src: Amazon,
+      height: "100",
+      width: "250",
+      alt: "Image 1",
+    },
+    {
+      src: Meli,
+      height: "100",
+      width: "200",
+      alt: "Image 2",
+    },
+    {
+      src: GCloud,
+      height: "100",
+      width: "200",
+      alt: "Image 3",
+    },
+    {
+      src: Microsoft,
+      height: "100",
+      width: "200",
+      alt: "Image 3",
+    },
+    {
+      src: Shopify,
+      height: "100",
+      width: "200",
+      alt: "Image 3",
+    },
+
+    // Agrega más imágenes según sea necesario
+  ];
+
+  const items = ["Inteligencia artificial", "Recursos humanos", "Puntos de venta (POS)", "Gestion de productos"];
   return (
     <div className="home-landing relative w-full flex justify-center items-center min-h-screen  pt-[68px]">
       <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 ">
@@ -18,8 +61,8 @@ const Home = () => {
           <h3 className=" text-[#b9b9b9] font-[600] text-center ">
             PARA EMPRENDEDORES Y EMPRESARIOS
           </h3>
-          <Slideemprendedores />
         </div>
+        <Carousel items={items} />
         <div className="titlemiddle-landing flex justify-center">
           <img src={Gestini} className="mastimepologo w-[1000px] " alt="" />
         </div>
@@ -45,7 +88,7 @@ const Home = () => {
           <span>Infraestructura Segura e Innovadora</span>
         </div>
         <div className="sliderinfraestructura-landing ">
-          <Slideinfraestructura />
+          <SliderEmprendedores images={imageList} />
         </div>
       </div>
     </div>

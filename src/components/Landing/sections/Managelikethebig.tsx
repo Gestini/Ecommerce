@@ -4,6 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,9 +29,11 @@ const Managelikethebig = () => {
         </div>
 
         <Swiper
+        
           navigation={true}
           spaceBetween={30}
           modules={[Navigation]}
+          
           className="mySwiper flex-grow flex w-full items-center justify-center  "
         >
           <SwiperSlide className="  flex-grow  flex justify-center items-center ">
