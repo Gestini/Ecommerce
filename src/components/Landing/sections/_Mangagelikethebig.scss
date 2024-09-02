@@ -28,6 +28,19 @@
 
 @media (max-width: 1250px) {
   .gridboxes--landing {
+    width: 400px !important;
+  }
+
+  .cardgridbottom-landing {
+    h5 {
+      text-align: center !important;
+      font-size: 18px !important;
+    }
+    span {
+      font-size: 14px !important;
+    }
+  }
+  .gridboxes--landing {
     flex-direction: column !important;
     height: auto !important;
     align-items: center;
@@ -62,14 +75,14 @@
   }
 }
 
-@media (max-width: 600px){
-  .cardgridbottom-landing{
-    h5{
-      text-align: center !important;
-      font-size: 18px !important;
-    }
-    span{
-      font-size: 14px !important;
-    }
+// @media (max-width: 800px) {
+//   .gridboxes--landing {
+//     width: 100% !important;
+//   }
+// }
+
+@media (max-width: 500px) {
+   .gridboxes--landing {
+    width: 100% !important;
   }
-} 
+}

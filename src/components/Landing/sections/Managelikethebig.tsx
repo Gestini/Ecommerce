@@ -11,6 +11,12 @@ import { FaShoppingBag } from "react-icons/fa";
 import { GoFileDirectoryFill } from "react-icons/go";
 import { GoArrowUpRight } from "react-icons/go";
 import { GoArrowDownLeft } from "react-icons/go";
+import Ingresos from "../../../assets/imagenes/Grid/Ingresos.png";
+import Gastos from "../../../assets/imagenes/Grid/Gastos.png";
+import Contactos from "../../../assets/imagenes/Grid/Contactos.png";
+import Informes from "../../../assets/imagenes/Grid/Informes.png";
+import Ecommerce from "../../../assets/imagenes/Grid/Ecommerce.png";
+import Gestor from "../../../assets/imagenes/Grid/Gestor.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -22,19 +28,45 @@ import { Navigation } from "swiper/modules";
 const slidesData = [
   {
     boxesizq: [
-      { title: "Gastos", subtitle: "Free", icon: GoArrowUpRight },
-      { title: "Gastos", subtitle: "Free", icon: GoArrowDownLeft },
+      {
+        title: "Gastos",
+        subtitle: "Free",
+        icon: GoArrowUpRight,
+        src: Ingresos,
+      },
+      {
+        title: "Gastos",
+        subtitle: "Free",
+        icon: GoArrowDownLeft,
+        src: Gastos,
+      },
     ],
     boxesmiddle: [
-      { title: "Contactos", subtitle: "Free", icon: BiSolidContact },
-      { title: "Informes", subtitle: "Free", icon: HiDocumentReport },
+      {
+        title: "Contactos",
+        subtitle: "Free",
+        icon: BiSolidContact,
+        src: Contactos,
+      },
+      {
+        title: "Informes",
+        subtitle: "Free",
+        icon: HiDocumentReport,
+        src: Informes,
+      },
     ],
     boxesder: [
-      { title: "Ecommerce", subtitle: "App de pago", icon: FaShoppingBag },
+      {
+        title: "Ecommerce",
+        subtitle: "App de pago",
+        icon: FaShoppingBag,
+        src: Ecommerce,
+      },
       {
         title: "Gestor de documentos",
         subtitle: "App de pago",
         icon: GoFileDirectoryFill,
+        src: Gestor,
       },
     ],
   },
@@ -74,15 +106,11 @@ const Managelikethebig = () => {
                       key={index}
                       className="boxizq-landing relative w-full h-full flex flex-col justify-center bg-[#363636] rounded-3xl"
                     >
-                      <div className="cardgridtop-landing mt-[-120px] w-full flex justify-center items-center">
-                        {React.createElement(box.icon, {
-                          className: "text-[#0a0b0a7f] text-[120px]",
-                        })}
-                      </div>
-                      <div className="cardgridbottom-landing absolute bottom-0 pb-10 w-full justify-center items-center text-[#00000042] flex flex-col font-[600]">
-                        <h5 className="text-[24px]">{box.title}</h5>
-                        <span className="text-[16px]">{box.subtitle}</span>
-                      </div>
+                      <img
+                        src={box.src}
+                        alt="Ingresos"
+                        className="absolute inset-0 w-full h-full object-cover bg-center rounded-3xl"
+                      />
                     </div>
                   ))}
                 </div>
@@ -92,15 +120,11 @@ const Managelikethebig = () => {
                       key={index}
                       className="boxtop-landing w-full relative flex flex-col justify-center flex-grow bg-[#D9D9D9] rounded-3xl"
                     >
-                      <div className="cardgridtop-landing mt-[-60px] w-full flex justify-center items-center">
-                        {React.createElement(box.icon, {
-                          className: "text-[#0a0b0a7f] text-[80px]",
-                        })}
-                      </div>
-                      <div className="cardgridbottom-landing absolute bottom-0 pb-5 w-full justify-center items-center text-[#00000042] flex flex-col font-[600]">
-                        <h5 className="text-[24px]">{box.title}</h5>
-                        <span className="text-[16px]">{box.subtitle}</span>
-                      </div>
+                      <img
+                        src={box.src}
+                        alt="Ingresos"
+                        className="absolute inset-0 w-full h-full object-cover bg-center rounded-3xl"
+                      />
                     </div>
                   ))}
                 </div>
@@ -110,15 +134,11 @@ const Managelikethebig = () => {
                       key={index}
                       className="boxder-landing relative flex flex-col justify-center w-full h-full bg-[#D9D9D9] rounded-3xl"
                     >
-                      <div className="cardgridtop-landing mt-[-120px] w-full flex justify-center items-center">
-                        {React.createElement(box.icon, {
-                          className: "text-[#0a0b0a7f] text-[120px]",
-                        })}
-                      </div>
-                      <div className="cardgridbottom-landing absolute bottom-0 pb-10 w-full justify-center items-center text-[#00000042] flex flex-col font-[600]">
-                        <h5 className="text-[24px]">{box.title}</h5>
-                        <span className="text-[16px]">{box.subtitle}</span>
-                      </div>
+                      <img
+                        src={box.src}
+                        alt="Ingresos"
+                        className="absolute inset-0 w-full h-full object-cover bg-center rounded-3xl"
+                      />
                     </div>
                   ))}
                 </div>
