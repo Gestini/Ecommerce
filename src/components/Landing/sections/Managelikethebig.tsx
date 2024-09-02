@@ -3,7 +3,14 @@ import "./_Mangagelikethebig.scss";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { FiArrowUpRight, FiArrowDownLeft } from "react-icons/fi";
+// import { GoArrowDownLeft } from "react-icons/go";
+import { BiSolidContact } from "react-icons/bi";
+import { HiDocumentReport } from "react-icons/hi";
+import { FaShoppingBag } from "react-icons/fa";
+import { GoFileDirectoryFill } from "react-icons/go";
+import { GoArrowUpRight } from "react-icons/go";
+import { GoArrowDownLeft } from "react-icons/go";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,6 +18,27 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+
+const slidesData = [
+  {
+    boxesizq: [
+      { title: "Gastos", subtitle: "Free", icon: GoArrowUpRight },
+      { title: "Gastos", subtitle: "Free", icon: GoArrowDownLeft },
+    ],
+    boxesmiddle: [
+      { title: "Contactos", subtitle: "Free", icon: BiSolidContact },
+      { title: "Informes", subtitle: "Free", icon: HiDocumentReport },
+    ],
+    boxesder: [
+      { title: "Ecommerce", subtitle: "App de pago", icon: FaShoppingBag },
+      {
+        title: "Gestor de documentos",
+        subtitle: "App de pago",
+        icon: GoFileDirectoryFill,
+      },
+    ],
+  }
+];
 
 const Managelikethebig = () => {
   return (
@@ -29,55 +57,74 @@ const Managelikethebig = () => {
         </div>
 
         <Swiper
-        
           navigation={true}
           spaceBetween={30}
           modules={[Navigation]}
-          
-          className="mySwiper flex-grow flex w-full items-center justify-center  "
+          className="mySwiper flex-grow flex w-full items-center justify-center"
         >
-          <SwiperSlide className="  flex-grow  flex justify-center items-center ">
-            {" "}
-            <div className="gridboxes--landing w-full justify-center h-[400px] flex gap-4 max-w-[100%]  ">
-              <div className="boxesizq flex  gap-4 w-1/2">
-                <div className="boxizq-landing w-full h-full bg-[#D9D9D9] rounded-3xl"></div>
-                <div className="boxder-landing w-full h-full  bg-[#D9D9D9] rounded-3xl"></div>
+          {slidesData.map((slide, slideIndex) => (
+            <SwiperSlide
+              key={slideIndex}
+              className="flex-grow flex justify-center items-center"
+            >
+              <div className="gridboxes--landing w-full justify-center h-[400px] flex gap-4 max-w-[100%]">
+                <div className="boxesizq flex gap-4 w-1/2">
+                  {slide.boxesizq.map((box, index) => (
+                    <div
+                      key={index}
+                      className="boxizq-landing relative w-full h-full flex flex-col justify-center bg-[#363636] rounded-3xl"
+                    >
+                      <div className="cardgridtop-landing mt-[-120px] w-full flex justify-center items-center">
+                        {React.createElement(box.icon, {
+                          className: "text-[#0a0b0a7f] text-[120px]",
+                        })}
+                      </div>
+                      <div className="cardgridbottom-landing absolute bottom-0 pb-10 w-full justify-center items-center text-[#00000042] flex flex-col font-[600]">
+                        <h5 className="text-[24px]">{box.title}</h5>
+                        <span className="text-[16px]">{box.subtitle}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="boxesmiddle--landing flex flex-col h-full gap-4 w-1/5">
+                  {slide.boxesmiddle.map((box, index) => (
+                    <div
+                      key={index}
+                      className="boxtop-landing w-full relative flex flex-col justify-center flex-grow bg-[#D9D9D9] rounded-3xl"
+                    >
+                      <div className="cardgridtop-landing mt-[-60px] w-full flex justify-center items-center">
+                        {React.createElement(box.icon, {
+                          className: "text-[#0a0b0a7f] text-[80px]",
+                        })}
+                      </div>
+                      <div className="cardgridbottom-landing absolute bottom-0 pb-5 w-full justify-center items-center text-[#00000042] flex flex-col font-[600]">
+                        <h5 className="text-[24px]">{box.title}</h5>
+                        <span className="text-[16px]">{box.subtitle}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="boxesder flex gap-4 w-1/2">
+                  {slide.boxesder.map((box, index) => (
+                    <div
+                      key={index}
+                      className="boxder-landing relative flex flex-col justify-center w-full h-full bg-[#D9D9D9] rounded-3xl"
+                    >
+                      <div className="cardgridtop-landing mt-[-120px] w-full flex justify-center items-center">
+                        {React.createElement(box.icon, {
+                          className: "text-[#0a0b0a7f] text-[120px]",
+                        })}
+                      </div>
+                      <div className="cardgridbottom-landing absolute bottom-0 pb-10 w-full justify-center items-center text-[#00000042] flex flex-col font-[600]">
+                        <h5 className="text-[24px]">{box.title}</h5>
+                        <span className="text-[16px]">{box.subtitle}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="boxesmiddle--landing flex flex-col h-full  gap-4 w-1/5">
-                <div className="boxtop-landing w-full flex-grow bg-[#D9D9D9] rounded-3xl"></div>
-                <div className="boxtop-landing w-full flex-grow bg-[#D9D9D9] rounded-3xl"></div>
-              </div>
-              <div className="boxesder flex  gap-4 w-1/2">
-                <div className="boxizq-landing w-full max h-full  bg-[#D9D9D9] rounded-3xl"></div>
-                <div className="boxder-landing w-full h-full  bg-[#D9D9D9] rounded-3xl"></div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className=" ">
-            {" "}
-            <div className="gridboxes--landing w-full justify-center h-[400px] flex gap-4 max-w-[100%]  ">
-              <div className="boxesizq flex  gap-4 w-1/2">
-                <div className="boxizq-landing w-full h-full bg-[#D9D9D9] rounded-3xl"></div>
-                <div className="boxder-landing w-full h-full  bg-[#D9D9D9] rounded-3xl"></div>
-              </div>
-              <div className="boxesmiddle--landing flex flex-col h-full  gap-4 w-1/5">
-                <div className="boxtop-landing w-full flex-grow bg-[#D9D9D9] rounded-3xl"></div>
-                <div className="boxtop-landing w-full flex-grow bg-[#D9D9D9] rounded-3xl"></div>
-              </div>
-              <div className="boxesder flex  gap-4 w-1/2">
-                <div className="boxizq-landing w-full max h-full  bg-[#D9D9D9] rounded-3xl"></div>
-                <div className="boxder-landing w-full h-full  bg-[#D9D9D9] rounded-3xl"></div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
