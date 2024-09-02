@@ -6,8 +6,8 @@
   );
 }
 
-$baseWidth: 250px;
-$baseHeight: 100px;
+$baseWidth: 150px;
+$baseHeight: 60px;
 $animationSpeed: 40s;
 
 // Animation
@@ -57,7 +57,7 @@ $animationSpeed: 40s;
   }
 
   .slide {
-    margin-right: 50px !important;
+    margin-right: 150px !important;
     height: $baseHeight;
     width: $baseWidth;
     flex-shrink: 0;
@@ -68,12 +68,12 @@ $animationSpeed: 40s;
   background: linear-gradient(
     to right,
     #fbfbfb 0%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(255, 255, 255, 0) 50%
   );
 }
 
-$baseWidth: 250px;
-$baseHeight: 100px;
+$baseWidth: 220px;
+$baseHeight: 50px;
 $animationSpeed: 40s;
 
 @keyframes scroll {
@@ -184,9 +184,17 @@ $animationSpeed: 40s;
 
 @media (max-width: 850px) {
   .slider {
-    width: 300px !important;
+    width: 350px !important;
   }
   .carousel {
-    width: 300px !important;
+    width: 350px !important;
   }
+
+  .item-content{
+    font-size: 10px !important;
+  }
+
+  
 }
+
+

@@ -39,6 +39,12 @@
 
 /* Estilos para pantallas con un ancho máximo de 700px */
 @media (max-width: 700px) {
+  .descriptionhome-landing{
+    display: none;
+  }
+  .h3emprendedores{
+    display: none !important;
+  }
   .navbar--landing {
     padding-left: 50px !important;
     padding-right: 50px !important;
@@ -108,13 +114,7 @@
 
 /* Estilos para pantallas con un ancho máximo de 550px */
 @media (max-width: 550px) {
-  .carousel {
-    display: none !important;
-  }
-  .slider{
-    display: none !important;
-  }
-  
+
 
   .empiezagratis {
     padding: 5px 10px !important;
@@ -145,19 +145,28 @@
 
 /* Estilos para pantallas con un ancho máximo de 500px */
 @media (max-width: 500px) {
+  .Emprendedoresempresarios-landing {
+    display: none !important;
+  }
   .bottomcontainer-landing {
     display: none !important;
+  }
+  .item-content{
+    padding-right: 20px !important;
+    padding-left: 20px !important;
   }
   .containermiddle-landing {
     margin-top: 0px !important;
   }
-
+  .carousel-item{
+    width: 150px !important;
+  }
   .home-landing {
     padding-top: 0px !important;
   }
 
   .containermiddle-landing{
-    gap: 80px !important;
+    gap: 20px !important;
   }
 
   .bottomiddle-landing {
