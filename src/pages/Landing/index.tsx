@@ -19,7 +19,7 @@ const index = () => {
       <Managelikethebig />
       <Whoweare />
       <Doitwithgenis />
-      <Genishelpsyou />
+      {/* <Genishelpsyou /> */}
       <Yourmodel />
     </>
   );
