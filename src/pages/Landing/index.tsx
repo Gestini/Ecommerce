@@ -14,7 +14,6 @@ const index = () => {
   return (
     <>
       <Navbar />
-
       <Home />
       <Managelikethebig />
       <Whoweare />

@@ -13,7 +13,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="items-navbar--landing flex flex-grow px-[50px] gap-4 ">
-        <div className="item-navbar--landing cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
+        {/* <div className="item-navbar--landing cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
           <span className=" font-[500] ">Soluciones</span>
           <IoIosArrowDown className="  " />
         </div>
@@ -28,11 +28,11 @@ const Navbar = () => {
         </div>
         <div className="item-navbar--landing cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
           <span className=" font-[500] ">Precios</span>
-        </div>
+        </div> */}
       </div>
       <div className="der-navbar--landing w-[300px] flex items-center justify-between  h-full ">
         <div className="item-navbar--landing  gap-2 flex justify-center items-center text-[#9b9b9b]">
-          <span className=" font-[500] ">Iniciar Sesion </span>
+          {/* <span className=" font-[500] ">Iniciar Sesion </span> */}
         </div>
         <button className="  bg-[#A0DB8E] px-[20px] py-[10px] rounded-lg font-[600] ">
           Empieza gratis

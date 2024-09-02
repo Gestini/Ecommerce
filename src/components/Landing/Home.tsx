@@ -16,6 +16,7 @@ import Meli from "../../assets/Logos/Meli.png";
 import Microsoft from "../../assets/Logos/Microsoft.png";
 import Shopify from "../../assets/Logos/Shopify.png";
 import Carousel from "./sliders/Slidertools";
+import { GiStarSwirl } from "react-icons/gi";
 
 const Home = () => {
   const imageList = [
@@ -49,8 +50,6 @@ const Home = () => {
       width: "200",
       alt: "Image 3",
     },
-
-    // Agrega más imágenes según sea necesario
   ];
 
   const items = ["Inteligencia artificial", "Recursos humanos", "Puntos de venta (POS)", "Gestion de productos"];
@@ -70,7 +69,7 @@ const Home = () => {
           <div className="rowbotonera items-center flex justify-center  gap-5 ">
             <button className="empiezagratis flex gap-2 bg-[#A0DB8E] font-[600] items-center px-[15px] py-[10px] rounded-lg border-[#ccc9c8] border-4 ">
               <span>Empieza gratis</span>
-              <FaMagic />
+              <GiStarSwirl />
             </button>
             <button className="descargawindow flex gap-2  font-[600] items-center px-[20px] py-[8px]  text-[#969996] rounded-lg border-[#969996] border-2 ">
               <span>Descargar para Windows</span>

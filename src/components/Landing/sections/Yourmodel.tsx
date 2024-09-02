@@ -36,7 +36,7 @@ const cardData: CardType[] = [
 ];
 
 const Yourmodel: FC = () => {
-  const [selectedCard, setSelectedCard] = useState<number | null>(null);
+  const [selectedCard, setSelectedCard] = useState<number>(1);
 
   return (
     <div className="divcontainersection min-h-screen items-center flex-col gap-[64px] mx-auto flex bg-[#FAFAFA]">
