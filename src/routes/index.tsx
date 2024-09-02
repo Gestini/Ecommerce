@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Preview from "@/pages/Preview";
+import CommingSoon from "@/pages/CommingSoon";
 import Ecommerce from "@/pages/Ecommerce";
 import Landing from "@/pages/Landing";
 import AllEcommerce from"@/pages/AllEcommerce"
@@ -32,7 +32,7 @@ const Router = () => {
         )
       }
       <Route path="/ecommerce" element={<AllEcommerce/>} />
-      <Route path="/dashboard" element={<Preview />} />
+      <Route path="/commingsoon" element={<CommingSoon />} />
     </Routes>
   );
 };
