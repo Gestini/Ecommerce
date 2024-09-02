@@ -1,4 +1,4 @@
-export const GestinyLogo = ({ height, width }) => (
+export const GestinyLogo = ({ height, width }:any) => (
   <svg
     width={width || "25"}
     height={height || "40"}
