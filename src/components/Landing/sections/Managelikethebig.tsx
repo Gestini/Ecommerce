@@ -37,7 +37,7 @@ const slidesData = [
         icon: GoFileDirectoryFill,
       },
     ],
-  }
+  },
 ];
 
 const Managelikethebig = () => {

@@ -61,3 +61,15 @@
     width: 100% !important;
   }
 }
+
+@media (max-width: 600px){
+  .cardgridbottom-landing{
+    h5{
+      text-align: center !important;
+      font-size: 18px !important;
+    }
+    span{
+      font-size: 14px !important;
+    }
+  }
+} 
