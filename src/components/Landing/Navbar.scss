@@ -1,10 +1,19 @@
-@media (max-width: 1150px){
-    .items-navbar--landing{
-        display: none !important;
-    }
+@media (max-width: 1150px) {
+  .items-navbar--landing {
+    display: none !important;
+  }
 
-    .navbar--landing{
-       
-        justify-content: space-between;
+  .navbarmedio {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 700px) {
+    .navbarmedio {
+        width: 100% !important;
     }
+  .navbar--landing {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
 }
