@@ -40,7 +40,7 @@ const Yourmodel: FC = () => {
 
   return (
     <div className="divcontainersection min-h-screen items-center flex-col gap-[64px] mx-auto flex bg-[#FAFAFA]">
-      <div className="section flex flex-col gap-[64px] w-full min-h-screen max-w-[80%] mx-auto">
+      <div className="section flex flex-col gap-[40px] w-full min-h-screen max-w-[80%] mx-auto">
         <div className="titlesection w-full flex flex-col gap-[20px] justify-center items-start">
           <div className="buttonsecttionname w-full justify-center flex">
             <button className="flex gap-2 w-auto px-[10px] py-[2px] rounded-full items-center text-[#a6a6a6] border-1 border-[#a6a6a6]">
