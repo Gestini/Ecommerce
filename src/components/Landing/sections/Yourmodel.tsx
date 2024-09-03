@@ -57,7 +57,7 @@ const Yourmodel: FC = () => {
             {cardData.map((card) => (
               <div
                 key={card.id}
-                className={`cardtypesbussines w-full min-w-[380px] max-w-[600px] border-2 ${
+                className={`cardtypesbussines w-full min-w-[350px] max-w-[600px] border-2 ${
                   selectedCard === card.id
                     ? "border-[#70C955] selected-card animate-card"
                     : "border-transparent"

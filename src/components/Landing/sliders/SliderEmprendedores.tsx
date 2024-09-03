@@ -3,7 +3,7 @@ import "./Slider.scss";
 
 // import "../../../assets/Logos/Amazon.png"
 
-const Slider = ({ images }:any ) => {
+const Slider = ({ images }: any) => {
   const slideTrackStyle = {
     width: `${images.length * 2 * 250}px`, // 250px es el ancho base de cada slide
   };
@@ -11,9 +11,7 @@ const Slider = ({ images }:any ) => {
   return (
     <div className="slider">
       <div className="slide-track" style={slideTrackStyle}>
-        
         {images.concat(images).map((image: any, index: any) => {
-          console.log("Image:", image);
           return (
             <div className="slide flex justify-center items-center" key={index}>
               <img
