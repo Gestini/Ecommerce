@@ -1,47 +1,45 @@
-import React from "react";
 import { AiFillThunderbolt } from "react-icons/ai";
-import { BsAsterisk } from "react-icons/bs";
+import { MdAttachMoney, MdBusiness, MdCloud, MdGroup, MdInventory, MdStore } from "react-icons/md";
 import "./Whoweare.scss";
 
 const Whoweare = () => {
   const cards = [
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdBusiness className="text-gray-500 text-[30px]" />,
+      title: "Empresas y Sucursales",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Administra varias empresas y sucursales desde una sola cuenta con cambio rápido entre ellas.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdStore className="text-gray-500 text-[30px]" />,
+      title: "Puntos de Venta",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Crea y gestiona puntos de venta personalizados para cada sucursal, optimizando tus operaciones.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdCloud className="text-gray-500 text-[30px]" />,
+      title: "Gestión flexible",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Administra tu negocio desde cualquier lugar con toda la información almacenada de manera segura en la nube.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdGroup className="text-gray-500 text-[30px]" />,
+      title: "Multisesiones Locales",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Cambia entre sesiones de forma rápida y segura en una sola máquina, ideal para múltiples usuarios.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdInventory className="text-gray-500 text-[30px]" />,
+      title: "Stock y Almacenes",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Controla inventarios en tiempo real y gestiona múltiples almacenes de manera eficiente.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdAttachMoney className="text-gray-500 text-[30px]" />,
+      title: "Facturación y Ventas",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Automatiza facturación y maneja ventas, generando informes financieros precisos.",
     },
-    // Agrega más objetos de cartas aquí
   ];
   return (
     <div className="divcontainersection min-h-screen items-center  flex-col gap-[64px] mx-auto flex  bg-[#FAFAFA] ">
