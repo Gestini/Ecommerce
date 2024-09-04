@@ -25,7 +25,7 @@ const Navbar = ({ openModal }: any) => {
 
   return (
     <>
-      <div className={`navbar--landing flex w-[100%] animation ${isScrolled ? 'navbarWrapper' : 'bg-[#fbfbfb]'} z-10 justify-center mx-auto gap-4 items-center py-[15px] sticky top-0 left-0`}>
+      <div className={`navbar--landing flex w-[100%] animation ${isScrolled ? 'navbarWrapper' : 'bg-[#fbfbfb]'} z-20 justify-center mx-auto gap-4 items-center py-[15px] sticky top-0 left-0`}>
         <div className="navbarmedio flex w-[80%]">
           <div className="izq-navbar--landing flex ">
             <div className="logo--landing">
@@ -50,10 +50,8 @@ const Navbar = ({ openModal }: any) => {
               <span className=" font-[500] text-[14px]">Precios</span>
             </div>
           </div>
-          <div className="der-navbar--landing w-[300px] flex items-center justify-between  h-full ">
-            <div className="gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] text-[14px]">Iniciar Sesion</span>
-            </div>
+          <div className="der-navbar--landing w-[300px] flex items-center justify-between  h-full gap-4 ">
+
             <button
               onClick={openModal}
               className=" buttontypesbussines"

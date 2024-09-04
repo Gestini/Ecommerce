@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
 .titlesectionh2 {
   font-family: "Figtree", sans-serif;
@@ -7,7 +7,7 @@
 
 .cardescriptiongrid-landing {
   font-size: clamp(15px, 1.2vw, 18px) !important;
-   font-family: "Figtree"
+  font-family: "Figtree";
 }
 
 .cardcaracterist {
@@ -18,7 +18,7 @@
 
 .titulocardgrid-landing {
   font-size: clamp(15px, 1.5vw, 30px) !important;
-   font-family: "Figtree"
+  font-family: "Figtree";
 }
 .gridcontainer {
   padding: 0 !important;
@@ -40,12 +40,14 @@
   .section {
     width: 100% !important;
     margin: 0 !important;
-    padding: 0 20px !important;
+
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     max-width: 100% !important;
   }
 }
 
-@media (max-height: 800px) and (min-width : 800px)   {
+@media (max-height: 800px) and (min-width: 800px) {
   .titlesection {
     gap: 5px !important;
   }
@@ -61,5 +63,4 @@
 }
 
 @media (max-height: 800px) {
-  
 }

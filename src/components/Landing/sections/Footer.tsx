@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram } from "react-icons/fa";
+import { AiFillInstagram  } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 import Gestini from "../../../assets/Logos/Gestini.png";
@@ -8,7 +8,7 @@ import { GestinyLogo } from "@/assets/Logo";
 const Footer = () => {
   // Datos internos del componente
   const socialLinks = [
-    { url: "https://www.instagram.com/gestiniok", icon: <FaInstagram /> },
+    { url: "https://www.instagram.com/gestiniok", icon: <AiFillInstagram  /> },
   ];
 
   const menuItems = [
