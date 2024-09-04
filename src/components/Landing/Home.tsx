@@ -18,7 +18,7 @@ import Shopify from "../../assets/Logos/Shopify.png";
 import Carousel from "./sliders/Slidertools";
 import { GiStarSwirl } from "react-icons/gi";
 
-const Home = () => {
+const Home = ({ openModal }: any) => {
   const imageList = [
     {
       src: Amazon,
@@ -52,7 +52,12 @@ const Home = () => {
     },
   ];
 
-  const items = ["Inteligencia artificial", "Recursos humanos", "Puntos de venta (POS)", "Gestion de productos"];
+  const items = [
+    "Inteligencia artificial",
+    "Recursos humanos",
+    "Puntos de venta (POS)",
+    "Gestion de productos",
+  ];
   return (
     <div className="home-landing relative w-full flex justify-center items-center min-h-screen  pt-[68px]">
       <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 ">
@@ -68,7 +73,7 @@ const Home = () => {
         <div className="bottomiddle-landing flex flex-col gap-6">
           <div className="rowbotonera items-center flex justify-center  gap-5 ">
             <button className="empiezagratis flex gap-2 bg-[#A0DB8E] font-[600] items-center px-[15px] py-[10px] rounded-lg border-[#ccc9c8] border-4 ">
-              <span>Empieza gratis</span>
+              <span onClick={openModal}>Empieza gratis</span>
               <GiStarSwirl />
             </button>
             <button className="descargawindow flex gap-2  font-[600] items-center px-[20px] py-[8px]  text-[#969996] rounded-lg border-[#969996] border-2 ">

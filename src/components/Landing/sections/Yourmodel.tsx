@@ -35,7 +35,7 @@ const cardData: CardType[] = [
   },
 ];
 
-const Yourmodel: FC = () => {
+const Yourmodel: FC = ({ openModal }: any) => {
   const [selectedCard, setSelectedCard] = useState<number>(1);
 
   return (
@@ -75,7 +75,10 @@ const Yourmodel: FC = () => {
                 </p>
               </div>
             ))}
-            <div className="buttontypesbussines w-[218px] h-[50px] flex justify-center items-center rounded-xl font-[600] text-[20px] cursor-pointer bg-[#A0DB8E]">
+            <div
+              onClick={openModal}
+              className="buttontypesbussines w-[218px] h-[50px] flex justify-center items-center rounded-xl font-[600] text-[20px] cursor-pointer bg-[#A0DB8E]"
+            >
               Empieza Gratis
             </div>
           </div>

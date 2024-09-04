@@ -3,6 +3,11 @@ import axios from 'axios'
 export const authApi = axios.create({
   baseURL: import.meta.env.VITE_SERVER_API,
 })
+export const NewsletterApi = axios.create({
+  baseURL: import.meta.env.VITE_SERVER_API_VERCEL,
+  withCredentials: true, // Asegúrate de agregar esta línea si usas cookies
+
+})
 
 export const api = axios.create({
   baseURL: import.meta.env.VITE_SERVER_API,

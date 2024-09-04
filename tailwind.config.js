@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#1D4ED8", // Azul primario
-        secondary: "#F97316", // Naranja secundario
+        primary: "#A0DB8E", // Azul primario
+        secondary: "#A0DB8E", // Naranja secundario
         accent: "#10B981", // Verde de acento
         neutral: "#9CA3AF", // Gris neutro
         "light-background": "#F3F4F6", // Fondo claro
