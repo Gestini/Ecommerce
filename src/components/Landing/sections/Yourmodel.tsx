@@ -46,11 +46,11 @@ const Yourmodel: FC<YourmodelProps> = ({ openModal }) => {
       <div className="section flex flex-col gap-[40px] w-full min-h-screen max-w-[80%] mx-auto">
         <div className="titlesection w-full flex flex-col gap-[20px] justify-center items-start">
           <div className="buttonsecttionname w-full justify-center flex">
-            <button className="flex gap-2 w-auto px-[10px] py-[2px] rounded-full items-center text-[#a6a6a6] border-1 border-[#a6a6a6]">
+            <button className="flex gap-2 w-auto px-[10px] py-[2px] rounded-full items-center text-[#a6a6a6] border-1 border-[#a6a6a6] blurAnimation">
               <AiFillThunderbolt /> Caracteristicas
             </button>
           </div>
-          <h2 className="titlesectionh2 nosadaptamostext text-start font-[700] text-[48px]">
+          <h2 className="titlesectionh2 nosadaptamostext text-start font-[700] text-[48px] blurAnimation">
             No importa tu modelo de negocio,{" "}
             <span className="text-[#70C955]">nos adaptamos!</span>
           </h2>
@@ -60,11 +60,10 @@ const Yourmodel: FC<YourmodelProps> = ({ openModal }) => {
             {cardData.map((card) => (
               <div
                 key={card.id}
-                className={`cardtypesbussines w-full min-w-[350px] max-w-[600px] border-2 ${
-                  selectedCard === card.id
-                    ? "border-[#70C955] selected-card animate-card"
-                    : "border-transparent"
-                } gap-3 rounded-3xl p-5 flex flex-col cursor-pointer`}
+                className={`cardtypesbussines w-full min-w-[350px] max-w-[600px] apearanimation border-2 ${selectedCard === card.id
+                  ? "border-[#70C955] selected-card animate-card"
+                  : "border-transparent"
+                  } gap-3 rounded-3xl p-5 flex flex-col cursor-pointer`}
                 onClick={() => setSelectedCard(card.id)}
               >
                 <div className="titlecardtypebussines w-full gap-4 flex items-center">
@@ -78,15 +77,18 @@ const Yourmodel: FC<YourmodelProps> = ({ openModal }) => {
                 </p>
               </div>
             ))}
-            <div
+            <button
               onClick={openModal}
-              className="buttontypesbussines w-[218px] h-[50px] flex justify-center items-center rounded-xl font-[600] text-[20px] cursor-pointer bg-[#A0DB8E]"
+              className="buttontypesbussines"
             >
               Empieza Gratis
-            </div>
+              <div className="shine-effect"></div>
+            </button>
+
+
           </div>
           <div className="rigthtypescontainer flex justify-center w-[50%]">
-            <div className="imagerigthtypebussines">
+            <div className="imagerigthtypebussines zoomAnimation">
               <img src={Gain} alt="" />
             </div>
           </div>

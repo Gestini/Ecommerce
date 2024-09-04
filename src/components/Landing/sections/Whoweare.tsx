@@ -46,11 +46,11 @@ const Whoweare = () => {
       <div className="section min-h-screen flex flex-col gap-[40px] w-full max-w-[80%]  mx-auto ]  ">
         <div className="titlesection w-full flex flex-col gap-[20px] justify-center items-center ">
           <div className="buttonsecttionname w-full justify-center flex">
-            <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] ">
+            <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] blurAnimation">
               <AiFillThunderbolt /> Caracteristicas
             </button>
           </div>
-          <h2 className="titlesectionh2 text-center font-[700] text-[48px] ">
+          <h2 className="titlesectionh2 text-center font-[700] text-[48px] blurAnimation">
             Porque somos los <span className=" text-[#70C955] "> mejores!</span>
           </h2>
         </div>
@@ -58,7 +58,7 @@ const Whoweare = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="cardcaracterist mx-auto w-[350px] flex flex-col gap-4 p-4 rounded-lg px-[36px] py-[20px]  "
+              className={`apearanimation cardcaracterist mx-auto w-[350px] flex flex-col gap-4 p-4 rounded-lg px-[36px] py-[20px]`}
             >
               <div className="w-[60px] h-[60px] flex justify-center bg-[#E0EDFA] rounded-lg items-center">
                 {card.icon}

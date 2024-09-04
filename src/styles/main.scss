@@ -33,6 +33,150 @@ h1 {
   transition-duration: 300ms;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blurIn {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #ff0000;
+  }
+  25% {
+    color: #00ff00;
+  }
+  50% {
+    color: #0000ff;
+  }
+  75% {
+    color: #ffff00;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+.colorChangeAnimation {
+  animation: colorChange 4s infinite ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+.apearanimation {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+.slideInAnimation {
+  animation: slideIn 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+.blurAnimation {
+  animation: blurIn 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
+}
+
+.zoomAnimation {
+  animation: zoomIn 0.5s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+.shakeAnimation {
+  animation: shake 0.5s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+
+.floatAnimation {
+  animation: float 3s infinite ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+
 input[type='color'] {
   -webkit-appearance: none;
   appearance: none;
