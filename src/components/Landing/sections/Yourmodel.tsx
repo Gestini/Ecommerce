@@ -35,7 +35,10 @@ const cardData: CardType[] = [
   },
 ];
 
-const Yourmodel: FC = ({ openModal }: any) => {
+interface YourmodelProps {
+  openModal: () => void;
+}
+const Yourmodel: FC<YourmodelProps> = ({ openModal }) => {
   const [selectedCard, setSelectedCard] = useState<number>(1);
 
   return (

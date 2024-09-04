@@ -76,7 +76,10 @@ const Home = ({ openModal }: any) => {
               <span onClick={openModal}>Empieza gratis</span>
               <GiStarSwirl />
             </button>
-            <button className="descargawindow flex gap-2  font-[600] items-center px-[20px] py-[8px]  text-[#969996] rounded-lg border-[#969996] border-2 ">
+            <button
+              onClick={openModal}
+              className="descargawindow flex gap-2  font-[600] items-center px-[20px] py-[8px]  text-[#969996] rounded-lg border-[#969996] border-2 "
+            >
               <span>Descargar para Windows</span>
             </button>
           </div>

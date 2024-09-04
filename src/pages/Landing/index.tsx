@@ -23,7 +23,7 @@ const Index = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar  openModal={openModal}/>
       <Home openModal={openModal} />
       <Managelikethebig />
       <Whoweare />
