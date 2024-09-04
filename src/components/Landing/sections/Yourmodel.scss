@@ -35,7 +35,7 @@
   font-weight: 600;
   font-size: 20px;
   cursor: pointer;
-  background-color: #A0DB8E;
+  background-color: #a0db8e;
   position: relative;
   overflow: hidden;
 }
@@ -50,7 +50,6 @@
   opacity: 0.2;
   transform: rotate(45deg);
   animation: shine 5s infinite;
-  
 }
 
 @keyframes shine {
@@ -89,12 +88,10 @@
   }
 }
 
-
 @media (max-height: 850px) {
   .carttypesbussines {
     height: 400px !important;
   }
-
 
   .buttontypesbussines {
     font-size: 16px !important;
@@ -102,7 +99,15 @@
   }
 
   .cardtypesbussines {
-    padding: 1rem !important;
+    padding: 0.8rem !important;
+  }
+
+  .cardtypesbussines.selected-card {
+    transform: scale(1.02);
+  }
+
+  .section {
+    padding-top: clamp(40px, 2vw, 180px) !important;
   }
 
   .imagerigthtypebussines {
@@ -152,9 +157,6 @@
   }
 
   .buttontypesbussines {
-    
     width: 100% !important;
   }
-
-
 }
