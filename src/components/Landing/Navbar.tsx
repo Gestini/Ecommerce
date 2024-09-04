@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import "./Navbar.scss";
 import { GestinyLogo } from "../../assets/Logo";
 
-const Navbar = () => {
+const Navbar = ({ openModal }: any) => {
   return (
     <div className=" navbar--landing z-10 flex w-[100%] justify-center mx-auto gap-4 items-center absolute   pt-[15px] ">
       <div className="navbarmedio flex w-[80%]  ">
@@ -35,7 +35,10 @@ const Navbar = () => {
           <div className="item-navbar--landing  gap-2 flex justify-center items-center text-[#9b9b9b]">
             <span className=" font-[500] ">Iniciar Sesion </span>
           </div>
-          <button className="  bg-[#A0DB8E] px-[20px] py-[10px] rounded-lg font-[600] ">
+          <button
+            onClick={openModal}
+            className="  bg-[#A0DB8E] px-[20px] py-[10px] rounded-lg font-[600] "
+          >
             Empieza gratis
           </button>
         </div>

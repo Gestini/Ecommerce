@@ -18,7 +18,7 @@ const index = () => {
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <Navbar />
+      <Navbar  openModal={openModal}/>
       <Home openModal={openModal} />
       <Managelikethebig />
       <Whoweare />
