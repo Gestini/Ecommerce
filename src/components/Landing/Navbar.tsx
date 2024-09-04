@@ -31,10 +31,8 @@ const Navbar = ({ openModal }: any) => {
               <span className=" font-[500] ">Precios</span>
             </div>
           </div>
-          <div className="der-navbar--landing w-[300px] flex items-center justify-between  h-full ">
-            <div className="item-navbar--landing  gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] ">Iniciar Sesion </span>
-            </div>
+          <div className="der-navbar--landing w-[300px] flex items-center justify-between  h-full gap-4 ">
+
             <button
               onClick={openModal}
               className=" buttontypesbussines"
