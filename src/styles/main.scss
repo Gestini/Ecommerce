@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'Poppins';
-  src: url('./src/assets/fonts/Poppins.ttf') format('truetype');
+  font-family: "Poppins";
+  src: url("./src/assets/fonts/Poppins.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-@import 'tailwindcss/base';
+@import "tailwindcss/base";
 
-@import 'tailwindcss/components';
+@import "tailwindcss/components";
 
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";
 
 * {
   box-sizing: border-box;
@@ -19,6 +19,10 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   background: var(--c-bg-color);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 p,
@@ -177,7 +181,8 @@ h1 {
   animation-range: entry 0% cover 50%;
 }
 
-input[type='color'] {
+
+input[type="color"] {
   -webkit-appearance: none;
   appearance: none;
   border: none;
@@ -211,12 +216,12 @@ input[type='color'] {
   }
 }
 
-input[type='color']::-webkit-color-swatch-wrapper {
+input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
   border-radius: 50%;
 }
 
-input[type='color']::-webkit-color-swatch {
+input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
 }

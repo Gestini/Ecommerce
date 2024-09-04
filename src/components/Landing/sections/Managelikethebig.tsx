@@ -17,15 +17,75 @@ import Contactos from "../../../assets/imagenes/Grid/Contactos.png";
 import Informes from "../../../assets/imagenes/Grid/Informes.png";
 import Ecommerce from "../../../assets/imagenes/Grid/Ecommerce.png";
 import Gestor from "../../../assets/imagenes/Grid/Gestor.png";
+import Exportaciondato from "../../../assets/imagenes/Grid/Exportaciondato.png";
+import Gruposdetrabajo from "../../../assets/imagenes/Grid/Gruposdetrabajo.png";
+import Analisisdatos from "../../../assets/imagenes/Grid/analisisdatos.png";
+import Chatentiemporeal from "../../../assets/imagenes/Grid/chatentiemporeal.png";
+import Contabilidad from "../../../assets/imagenes/Grid/contabilidad.png";
+import Genisia from "../../../assets/imagenes/Grid/genisia.png";
+import Gestiondeposito from "../../../assets/imagenes/Grid/gestiondeposito.png";
+import Gestionsucursales from "../../../assets/imagenes/Grid/gestionsucursales.png";
+import Gestionusuarios from "../../../assets/imagenes/Grid/gestionusuarios.png";
+import Lectordocus from "../../../assets/imagenes/Grid/lectordocus.png";
+import Multiempresarial from "../../../assets/imagenes/Grid/multiempresarial.png";
+import Puntodeventa from "../../../assets/imagenes/Grid/puntodeventa.png";
+import Reportesyestadisticas from "../../../assets/imagenes/Grid/reportesyestadisticas.png";
+import RRHH from "../../../assets/imagenes/Grid/rrhh.png";
+import Sdeguridadyproteccion from "../../../assets/imagenes/Grid/sdeguridadyproteccion.png";
+import Ventaa from "../../../assets/imagenes/Grid/ventas.png";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css/navigation";
 
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 const slidesData = [
+  {
+    boxesizq: [
+      {
+        title: "Gastos",
+        subtitle: "Free",
+        icon: GoArrowUpRight,
+        src: RRHH,
+      },
+      {
+        title: "Gastos",
+        subtitle: "Free",
+        icon: GoArrowDownLeft,
+        src: Puntodeventa,
+      },
+    ],
+    boxesmiddle: [
+      {
+        title: "Contactos",
+        subtitle: "Free",
+        icon: BiSolidContact,
+        src: Gruposdetrabajo,
+      },
+      {
+        title: "Informes",
+        subtitle: "Free",
+        icon: HiDocumentReport,
+        src: Exportaciondato,
+      },
+    ],
+    boxesder: [
+      {
+        title: "Ecommerce",
+        subtitle: "App de pago",
+        icon: FaShoppingBag,
+        src: Gestiondeposito,
+      },
+      {
+        title: "Gestor de documentos",
+        subtitle: "App de pago",
+        icon: GoFileDirectoryFill,
+        src: Ventaa,
+      },
+    ],
+  },
   {
     boxesizq: [
       {
@@ -70,12 +130,59 @@ const slidesData = [
       },
     ],
   },
+  {
+    boxesizq: [
+      {
+        title: "Gastos",
+        subtitle: "Free",
+        icon: GoArrowUpRight,
+        src: Genisia,
+      },
+      {
+        title: "Gastos",
+        subtitle: "Free",
+        icon: GoArrowDownLeft,
+        src: Lectordocus,
+      },
+    ],
+    boxesmiddle: [
+      {
+        title: "Contactos",
+        subtitle: "Free",
+        icon: BiSolidContact,
+        src: Contabilidad,
+      },
+      {
+        title: "Informes",
+        subtitle: "Free",
+        icon: HiDocumentReport,
+        src: Gestionusuarios,
+      },
+    ],
+    boxesder: [
+      {
+        title: "Ecommerce",
+        subtitle: "App de pago",
+        icon: FaShoppingBag,
+        src: Chatentiemporeal,
+      },
+      {
+        title: "Gestor de documentos",
+        subtitle: "App de pago",
+        icon: GoFileDirectoryFill,
+        src: Analisisdatos,
+      },
+    ],
+  },
 ];
 
 const Managelikethebig = () => {
   return (
     <div className="divcontainersection min-h-screen items-center  flex-col gap-[64px] mx-auto  flex  bg-[#FAFAFA] ">
-      <div className="section flex flex-col min-h-screen w-full max-w-[100%] gap-[40px]  mx-auto ] ">
+      <div
+        id="herramientas"
+        className="section flex flex-col min-h-screen w-full max-w-[100%] gap-[40px]  mx-auto ] "
+      >
         <div className="titlesection justify-center items-center w-full flex flex-col gap-[20px] ">
           <div className="buttonsecttionname w-full justify-center flex">
             <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] blurAnimation">
@@ -91,7 +198,11 @@ const Managelikethebig = () => {
         <Swiper
           navigation={true}
           spaceBetween={30}
-          modules={[Navigation]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: true,
+          }}
+          modules={[Autoplay]}
           className="mySwiper flex-grow flex w-full items-center justify-center blurAnimation"
         >
           {slidesData.map((slide, slideIndex) => (

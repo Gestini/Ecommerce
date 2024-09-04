@@ -189,7 +189,13 @@ const StepModal: React.FC<StepModalProps> = ({
   };
 
   return (
-    <Modal backdrop={"blur"} size={"xl"} isOpen={isOpen} onClose={handleClose}>
+    <Modal
+      backdrop={"blur"}
+      size={"xl"}
+      isOpen={isOpen}
+      onClose={handleClose}
+      placement={"center"}
+    >
       <ModalContent>
         <ModalBody className="py-[30px] px-[60px] flex flex-col gap-7">
           {renderStepContent()}
