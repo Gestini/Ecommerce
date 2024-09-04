@@ -62,8 +62,8 @@ const Home = () => {
           </h3>
         </div>
         <Carousel items={items} />
-        <div className="titlemiddle-landing flex justify-center">
-          <img src={Gestini} className="mastimepologo w-[1000px] " alt="" />
+        <div className="titlemiddle-landing flex justify-center  select-none">
+          <img src={Gestini} className="mastimepologo w-[1000px]" alt="" />
         </div>
         <div className="bottomiddle-landing flex flex-col gap-6">
           <div className="rowbotonera items-center flex justify-center  gap-5 ">
