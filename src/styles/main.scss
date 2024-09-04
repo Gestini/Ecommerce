@@ -111,9 +111,11 @@ h1 {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -123,15 +125,19 @@ h1 {
   0% {
     color: #ff0000;
   }
+
   25% {
     color: #00ff00;
   }
+
   50% {
     color: #0000ff;
   }
+
   75% {
     color: #ffff00;
   }
+
   100% {
     color: #ff0000;
   }
@@ -166,6 +172,33 @@ h1 {
   animation: zoomIn 0.5s ease-out;
   animation-timeline: view();
   animation-range: entry 0% cover 20%;
+}
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoomAnimationInmediate {
+  &.i1 {
+    animation: zoomIn 0.5s ease-out;
+  }
+
+  &.i2 {
+    animation: zoomIn 0.5s ease-out;
+  }
+
+  &.i3 {
+    animation: zoomIn 0.5s ease-out;
+  }
 }
 
 .shakeAnimation {
