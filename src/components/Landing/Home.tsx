@@ -1,51 +1,38 @@
-import React from "react";
-import Cuadrado from "../../assets/Herosection.png";
-// import Mastiempo from "../../assets/mastiempo.png";
-import Gestini from "../../assets/Logos/Gestinii.png";
-
-import { FaMagic } from "react-icons/fa";
-import { IoMdArrowDropright } from "react-icons/io";
-
-import "./Home.scss";
-import Slideemprendedores from "./sliders/Slideemprendedores";
-import Slideinfraestructura from "./sliders/Slideinfraestructura";
-import SliderEmprendedores from "./sliders/SliderEmprendedores";
-import Amazon from "../../assets/Logos/Amazon.png";
-import GCloud from "../../assets/Logos/GCloud.png";
-import Meli from "../../assets/Logos/Meli.png";
-import Microsoft from "../../assets/Logos/Microsoft.png";
-import Shopify from "../../assets/Logos/Shopify.png";
-import Carousel from "./sliders/Slidertools";
+import Imagenes from "@/assets/Images";
 import { GiStarSwirl } from "react-icons/gi";
+import { IoMdArrowDropright } from "react-icons/io";
+import "./Home.scss";
+import SliderEmprendedores from "./sliders/SliderEmprendedores";
+import Carousel from "./sliders/Slidertools";
 
 const Home = ({ openModal }: any) => {
   const imageList = [
     {
-      src: Amazon,
+      src: 'supplier1',
       height: "100",
       width: "250",
       alt: "Image 1",
     },
     {
-      src: Meli,
+      src: 'supplier2',
       height: "100",
       width: "200",
       alt: "Image 2",
     },
     {
-      src: GCloud,
+      src: 'supplier3',
       height: "100",
       width: "200",
       alt: "Image 3",
     },
     {
-      src: Microsoft,
+      src: 'supplier4',
       height: "100",
       width: "200",
       alt: "Image 3",
     },
     {
-      src: Shopify,
+      src: 'supplier2',
       height: "100",
       width: "200",
       alt: "Image 3",
@@ -58,9 +45,9 @@ const Home = ({ openModal }: any) => {
     "Puntos de venta (POS)",
     "Gestion de productos",
   ];
-  
+
   return (
-    <div className="home-landing relative w-full flex justify-center items-center min-h-screen  pt-[68px]">
+    <div className="home-landing relative w-full flex justify-center items-center min-h-screen">
       <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 z-10">
         <div className="Emprendedoresempresarios-landing flex flex-col gap-8">
           <h3 className="h3emprendedores text-[#b9b9b9] font-[500] text-center ">
@@ -69,7 +56,7 @@ const Home = ({ openModal }: any) => {
         </div>
         <Carousel items={items} />
         <div className="titlemiddle-landing flex justify-center  select-none">
-          <img src={Gestini} className="mastimepologo w-[1000px]" alt="" />
+          <Imagenes src='herosectionlogo' className="mastimepologo w-[1000px]" alt="gestini" />
         </div>
         <div className="bottomiddle-landing flex flex-col gap-6">
           <div className="rowbotonera items-center flex justify-center  gap-5">

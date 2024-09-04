@@ -10,29 +10,28 @@ import { reqGetUnitsByEcommerce } from "@/api/requests";
 const Router = () => {
   const [companies, setCompanies] = React.useState<Unit[]>([]);
 
-  console.log(companies);
-  React.useEffect(() => {
-    const loadUserCompanies = async () => {
-      try {
-        const response = await reqGetUnitsByEcommerce();
-        setCompanies(response.data);
-      } catch (error) {
-        console.error('Error fetching business units:', error);
-      }
-    };
-    loadUserCompanies();
-  }, []);
+  // console.log(companies);
+  // React.useEffect(() => {
+  //   const loadUserCompanies = async () => {
+  //     try {
+  //       const response = await reqGetUnitsByEcommerce();
+  //       setCompanies(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching business units:', error);
+  //     }
+  //   };
+  //   loadUserCompanies();
+  // }, []);
 
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-      {
+      {/* {
         companies.map((ele, ind) =>
           < Route path={`/store/${ele.link}`} element={<Ecommerce unit={ele} />} />
         )
-      }
-      <Route path="/ecommerce" element={<AllEcommerce/>} />
-      <Route path="/commingsoon" element={<CommingSoon />} />
+      } */}
+      {/* <Route path="/ecommerce" element={<AllEcommerce/>} /> */}
     </Routes>
   );
 };

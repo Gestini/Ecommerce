@@ -225,6 +225,10 @@ input[type="color"] {
   border-radius: 50%;
 }
 
+.navbarWrapper {
+  background-color: rgba(160, 219, 142, 0.2);
+}
+
 .sidebarthumb {
   &::-webkit-scrollbar-thumb {
     background: transparent;

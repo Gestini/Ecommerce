@@ -1,7 +1,5 @@
-import React from "react";
 import "./Slider.scss";
-
-// import "../../../assets/Logos/Amazon.png"
+import Imagenes from "@/assets/Images";
 
 const Slider = ({ images }: any) => {
   const slideTrackStyle = {
@@ -14,10 +12,9 @@ const Slider = ({ images }: any) => {
         {images.concat(images).map((image: any, index: any) => {
           return (
             <div className="slide flex justify-center items-center" key={index}>
-              <img
+              <Imagenes
                 src={image.src}
-                height={image.height || "100"}
-                width={image.width || "250"}
+                className={image.className}
                 alt={image.alt || ""}
               />
             </div>

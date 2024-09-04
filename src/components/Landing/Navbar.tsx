@@ -4,36 +4,55 @@ import "./Navbar.scss";
 import { GestinyLogo } from "../../assets/Logo";
 
 const Navbar = ({ openModal }: any) => {
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className=" navbar--landing z-10 flex w-[100%] justify-center mx-auto gap-4 items-center absolute pt-[15px]">
-        <div className="navbarmedio flex w-[80%]  ">
+      <div className={`navbar--landing flex w-[100%] animation ${isScrolled ? 'navbarWrapper' : 'bg-[#fbfbfb]'} z-10 justify-center mx-auto gap-4 items-center py-[15px] sticky top-0 left-0`}>
+        <div className="navbarmedio flex w-[80%]">
           <div className="izq-navbar--landing flex ">
-            <div className="logo--landing ">
+            <div className="logo--landing">
               <GestinyLogo />
             </div>
           </div>
           <div className="items-navbar--landing flex flex-grow px-[50px] gap-4 ">
-            <div className="item-navbar--landing cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] ">Soluciones</span>
+            <div className="cursor-pointer gap-2 flex justify-center items-center text-[#9b9b9b]">
+              <span className=" font-[500] text-[14px]">Soluciones</span>
               <IoIosArrowDown />
             </div>
-            <div className="item-navbar--landing cursor-pointer   gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] ">Descargar</span>
+            <div className="cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
+              <span className=" font-[500] text-[14px]">Descargar</span>
             </div>
-            <div className="item-navbar--landing cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] ">Equipo</span>
+            <div className="cursor-pointer gap-2 flex justify-center items-center text-[#9b9b9b]">
+              <span className=" font-[500] text-[14px]">Equipo</span>
             </div>
-            <div className="item-navbar--landing cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] ">Centro de ayuda</span>
+            <div className="cursor-pointer gap-2 flex justify-center items-center text-[#9b9b9b]">
+              <span className=" font-[500] text-[14px] ">Centro de ayuda</span>
             </div>
-            <div className="item-navbar--landing cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] ">Precios</span>
+            <div className="cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
+              <span className=" font-[500] text-[14px]">Precios</span>
             </div>
           </div>
           <div className="der-navbar--landing w-[300px] flex items-center justify-between  h-full ">
-            <div className="item-navbar--landing  gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] ">Iniciar Sesion </span>
+            <div className="gap-2 flex justify-center items-center text-[#9b9b9b]">
+              <span className=" font-[500] text-[14px]">Iniciar Sesion</span>
             </div>
             <button
               onClick={openModal}
@@ -44,7 +63,7 @@ const Navbar = ({ openModal }: any) => {
             </button>
           </div>
         </div>
-      </div>
+      </div >
     </>
 
   );

@@ -3,6 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 import Gestini from "../../../assets/Logos/Gestini.png";
+import { GestinyLogo } from "@/assets/Logo";
 
 const Footer = () => {
   // Datos internos del componente
@@ -40,7 +41,7 @@ const Footer = () => {
     <div className="footer--landing bg-[#FAFAFA] px-[100px] py-[100px] w-full flex flex-col">
       <div className="topfooter-landing px-[100px] border-b-1 pb-[50px] border-[#70C955] flex w-full justify-between">
         <div className="sectionlogofooter-landing w-full max-w-[365px] flex flex-col gap-[32px]">
-          <img src={Gestini} className="w-[45px]" alt="Logo" />
+          <GestinyLogo />
           <p className="descriptionfooter-landing font-Figtree text-[#929AA7]">
             {description}
           </p>

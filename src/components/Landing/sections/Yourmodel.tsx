@@ -1,14 +1,15 @@
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, ImgHTMLAttributes, useState } from "react";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { HiMiniUser, HiMiniUserGroup, HiMiniUsers } from "react-icons/hi2";
 import "./Yourmodel.scss"; // Asegúrate de importar el archivo SCSS aquí
+import Imagenes from "@/assets/Images";
 
 interface CardType {
   id: number;
   title: string;
   description: string;
   icon: ReactNode;
-  image: string;
+  imageSrc: string;
 }
 
 const cardData: CardType[] = [
@@ -18,7 +19,7 @@ const cardData: CardType[] = [
     description:
       "Arrancá gratis y sin vueltas. 😎 Organiza tu inventario, controlá tus ventas, emití facturas, invitá colaboradores a tu empresa, registrá tu punto de venta y mucho más. 🚀",
     icon: <HiMiniUser className="text-[#0000005d] text-[24px]" />,
-    image: 'https://gestini.nyc3.cdn.digitaloceanspaces.com/UTILS/unitType/Group%201000001648%20(1).png',
+    imageSrc: "UnitTypeImage1"
   },
   {
     id: 2,
@@ -26,7 +27,7 @@ const cardData: CardType[] = [
     description:
       "Optimiza tu Pyme con un amplio inventario y múltiples sucursales. 📊 Disfruta de facturación ilimitada, múltiples puntos de venta y mejora tu empresa con IA.🤓",
     icon: <HiMiniUsers className="text-[#0000005d] text-[24px]" />,
-    image: 'https://gestini.nyc3.cdn.digitaloceanspaces.com/UTILS/unitType/Group%201000001652%20(1).png',
+    imageSrc: "UnitTypeImage2" 
   },
   {
     id: 3,
@@ -34,7 +35,7 @@ const cardData: CardType[] = [
     description:
       "Gestioná operaciones complejas de forma sencilla. 😊 Administra hasta 100,000 productos, múltiples almacenes y sucursales, maximizando la eficiencia con IA. 💪",
     icon: <HiMiniUserGroup className="text-[#0000005d] text-[24px]" />,
-    image: 'https://gestini.nyc3.cdn.digitaloceanspaces.com/UTILS/unitType/Group%201000001654%20(1).png',
+    imageSrc: "UnitTypeImage3" 
   },
 ];
 
@@ -99,13 +100,13 @@ const Yourmodel: FC<YourmodelProps> = ({ openModal }) => {
           <div className="rigthtypescontainer flex justify-center w-[50%]">
             <div className="imagerigthtypebussines zoomAnimation zoomAnimationInmediate">
               {selectedCardData && selectedCard == 1 && (
-                <img className={`w-full zoomAnimationInmediate i${selectedCard}`} src={selectedCardData.image} alt={selectedCardData.title} />
+                <Imagenes className={`w-full zoomAnimationInmediate i${selectedCard}`} src={selectedCardData.imageSrc} alt={selectedCardData.title} />
               )}
               {selectedCardData && selectedCard == 2 && (
-                <img className={`w-full zoomAnimationInmediate i${selectedCard}`} src={selectedCardData.image} alt={selectedCardData.title} />
+                <Imagenes className={`w-full zoomAnimationInmediate i${selectedCard}`} src={selectedCardData.imageSrc} alt={selectedCardData.title} />
               )}
               {selectedCardData && selectedCard == 3 && (
-                <img className={`w-full zoomAnimationInmediate i${selectedCard}`} src={selectedCardData.image} alt={selectedCardData.title} />
+                <Imagenes className={`w-full zoomAnimationInmediate i${selectedCard}`} src={selectedCardData.imageSrc} alt={selectedCardData.title} />
               )}
             </div>
           </div>
