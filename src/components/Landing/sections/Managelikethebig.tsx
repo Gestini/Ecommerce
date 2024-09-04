@@ -75,7 +75,10 @@ const slidesData = [
 const Managelikethebig = () => {
   return (
     <div className="divcontainersection min-h-screen items-center  flex-col gap-[64px] mx-auto  flex  bg-[#FAFAFA] ">
-      <div className="section flex flex-col min-h-screen w-full max-w-[100%] gap-[40px]  mx-auto ] ">
+      <div
+        id="herramientas"
+        className="section flex flex-col min-h-screen w-full max-w-[100%] gap-[40px]  mx-auto ] "
+      >
         <div className="titlesection justify-center items-center w-full flex flex-col gap-[20px] ">
           <div className="buttonsecttionname w-full justify-center flex">
             <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] ">
