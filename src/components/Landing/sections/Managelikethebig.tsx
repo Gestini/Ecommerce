@@ -185,11 +185,11 @@ const Managelikethebig = () => {
       >
         <div className="titlesection justify-center items-center w-full flex flex-col gap-[20px] ">
           <div className="buttonsecttionname w-full justify-center flex">
-            <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] ">
+            <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] blurAnimation">
               <AiFillThunderbolt /> Herramientas
             </button>
           </div>
-          <h2 className="titlesectionh2 titleherramientas genisayuda  font-[700]   text-center  ">
+          <h2 className="titlesectionh2 titleherramientas genisayuda font-[700] text-center blurAnimation">
             Gestiona como los grandes con todas
             <span className=" text-[#70C955] "> las mejores herramientas</span>
           </h2>
@@ -203,7 +203,7 @@ const Managelikethebig = () => {
             disableOnInteraction: true,
           }}
           modules={[Autoplay]}
-          className="mySwiper flex-grow flex w-full items-center justify-center"
+          className="mySwiper flex-grow flex w-full items-center justify-center blurAnimation"
         >
           {slidesData.map((slide, slideIndex) => (
             <SwiperSlide

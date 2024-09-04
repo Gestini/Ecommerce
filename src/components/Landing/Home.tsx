@@ -58,20 +58,21 @@ const Home = ({ openModal }: any) => {
     "Puntos de venta (POS)",
     "Gestion de productos",
   ];
+  
   return (
     <div className="home-landing relative w-full flex justify-center items-center min-h-screen  pt-[68px]">
-      <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 ">
+      <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 z-10">
         <div className="Emprendedoresempresarios-landing flex flex-col gap-8">
           <h3 className="h3emprendedores text-[#b9b9b9] font-[500] text-center ">
             PARA EMPRENDEDORES Y EMPRESARIOS
           </h3>
         </div>
         <Carousel items={items} />
-        <div className="titlemiddle-landing flex justify-center">
-          <img src={Gestini} className="mastimepologo w-[1000px] " alt="" />
+        <div className="titlemiddle-landing flex justify-center  select-none">
+          <img src={Gestini} className="mastimepologo w-[1000px]" alt="" />
         </div>
         <div className="bottomiddle-landing flex flex-col gap-6">
-          <div className="rowbotonera items-center flex justify-center  gap-5 ">
+          <div className="rowbotonera items-center flex justify-center  gap-5">
             <button className="empiezagratis flex gap-2 bg-[#A0DB8E] font-[600] items-center px-[15px] py-[10px] rounded-lg border-[#ccc9c8] border-4 ">
               <span onClick={openModal}>Empieza gratis</span>
               <GiStarSwirl />
@@ -83,7 +84,7 @@ const Home = ({ openModal }: any) => {
               <span>Descargar para Windows</span>
             </button>
           </div>
-          <h4 className="descriptionhome-landing text-center text-[#969996] font-[500]  text-[20px] ">
+          <h4 className="descriptionhome-landing text-center text-[#969996] font-[500]  text-[20px]">
             Empieza gratis y gestiona tu empresa con procesos automatizados y
             faciles.
           </h4>

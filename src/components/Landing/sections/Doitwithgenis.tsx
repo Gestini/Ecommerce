@@ -5,7 +5,7 @@ const Doitwithgenis = () => {
   return (
     <div className=" bg-[#FAFAFA] h-[50vh] flex justify-center items-center ">
       <div className="doitwith-genis w-[80%] flex justify-center items-center text-[200px] font-[600] text-[#00000027] ">
-        <p>
+        <p className="blurAnimation">
           Hazlo con <span className="text-[#70C955] ">Genis</span>
         </p>
       </div>
