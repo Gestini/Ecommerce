@@ -33,7 +33,7 @@ const Navbar = ({ openModal }: any) => {
             </div>
           </div>
           <div className="items-navbar--landing flex flex-grow px-[50px] gap-4 ">
-            <div className="cursor-pointer gap-2 flex justify-center items-center text-[#9b9b9b]">
+            {/* <div className="cursor-pointer gap-2 flex justify-center items-center text-[#9b9b9b]">
               <span className=" font-[500] text-[14px]">Soluciones</span>
               <IoIosArrowDown />
             </div>
@@ -48,7 +48,7 @@ const Navbar = ({ openModal }: any) => {
             </div>
             <div className="cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
               <span className=" font-[500] text-[14px]">Precios</span>
-            </div>
+            </div> */}
           </div>
           <div className="der-navbar--landing w-[300px] flex items-center justify-between  h-full gap-4 ">
 

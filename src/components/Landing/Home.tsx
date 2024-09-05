@@ -55,8 +55,8 @@ const Home = ({ openModal }: any) => {
           </h3>
         </div>
         <Carousel items={items} />
-        <div className="titlemiddle-landing flex justify-center  select-none">
-          <Imagenes src='herosectionlogo' className="mastimepologo w-[1000px]" alt="gestini" />
+        <div className="titlemiddle-landing flex justify-center select-none">
+          <Imagenes src='herosectionlogo' className="mastimepologo w-[1000px] select-none" alt="gestini" />
         </div>
         <div className="bottomiddle-landing flex flex-col gap-6">
           <div className="rowbotonera items-center flex justify-center  gap-5">
