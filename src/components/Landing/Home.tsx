@@ -58,7 +58,7 @@ const Home = ({ openModal }: any) => {
     "Puntos de venta (POS)",
     "Gestion de productos",
   ];
-  
+
   return (
     <div className="home-landing relative w-full flex justify-center items-center min-h-screen  pt-[68px]">
       <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 z-10">
