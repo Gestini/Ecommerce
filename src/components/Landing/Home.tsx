@@ -4,35 +4,36 @@ import { IoMdArrowDropright } from "react-icons/io";
 import "./Home.scss";
 import SliderEmprendedores from "./sliders/SliderEmprendedores";
 import Carousel from "./sliders/Slidertools";
+import Logo from "../../assets/Logos/Gestinilogo.webp";
 
 const Home = ({ openModal }: any) => {
   const imageList = [
     {
-      src: 'supplier1',
+      src: "supplier1",
       height: "100",
       width: "250",
       alt: "Image 1",
     },
     {
-      src: 'supplier2',
+      src: "supplier2",
       height: "100",
       width: "200",
       alt: "Image 2",
     },
     {
-      src: 'supplier3',
+      src: "supplier3",
       height: "100",
       width: "200",
       alt: "Image 3",
     },
     {
-      src: 'supplier4',
+      src: "supplier4",
       height: "100",
       width: "200",
       alt: "Image 3",
     },
     {
-      src: 'supplier2',
+      src: "supplier2",
       height: "100",
       width: "200",
       alt: "Image 3",
@@ -48,7 +49,7 @@ const Home = ({ openModal }: any) => {
 
   return (
     <div className="home-landing relative w-full flex justify-center items-center min-h-screen">
-      <div className="containermiddle-landing mt-[-200px] flex flex-col gap-2 z-10">
+      <div className="containermiddle-landing mt-[-200px] flex flex-col gap-8 z-10">
         <div className="Emprendedoresempresarios-landing flex flex-col gap-8">
           <h3 className="h3emprendedores text-[#b9b9b9] font-[500] text-center ">
             PARA EMPRENDEDORES Y EMPRESARIOS
@@ -56,7 +57,11 @@ const Home = ({ openModal }: any) => {
         </div>
         <Carousel items={items} />
         <div className="titlemiddle-landing flex justify-center select-none">
-          <Imagenes src='herosectionlogo' className="mastimepologo w-[1000px] select-none" alt="gestini" />
+          <img
+            src={Logo}
+            className="mastimepologo w-[1000px] select-none"
+            alt="gestini"
+          />
         </div>
         <div className="bottomiddle-landing flex flex-col gap-6">
           <div className="rowbotonera items-center flex justify-center  gap-5">
