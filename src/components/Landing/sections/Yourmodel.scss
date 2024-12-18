@@ -26,18 +26,17 @@
 }
 
 .buttontypesbussines {
-  width: 200px;
-  height: 50px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px; /* 10px para redondear las esquinas */
   font-weight: 600;
-  font-size: 20px;
   cursor: pointer;
   background-color: #a0db8e;
   position: relative;
   overflow: hidden;
+  padding: 10px 20px;
 }
 
 .shine-effect {
@@ -93,11 +92,6 @@
     height: 400px !important;
   }
 
-  .buttontypesbussines {
-    font-size: 16px !important;
-    height: 40px !important;
-  }
-
   .cardtypesbussines {
     padding: 0.8rem !important;
   }
@@ -144,19 +138,11 @@
     max-width: 100% !important;
     //   height: clamp(200px, 35vw, 880px) !important;
   }
-
-  .buttontypesbussines {
-    width: clamp(100px, 55vw, 880px) !important;
-  }
 }
 
 @media (max-width: 500px) {
   .nosadaptamostext {
     width: 100% !important;
     text-align: center !important;
-  }
-
-  .buttontypesbussines {
-    width: 100% !important;
   }
 }

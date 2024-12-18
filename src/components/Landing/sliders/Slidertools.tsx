@@ -3,7 +3,7 @@ import "./Slider.scss";
 
 const Carousel = ({ items }: any) => {
   const carouselTrackStyle = {
-    width: `${items.length * 2 * 250}px`, // 250px es el ancho base de cada slide
+    width: `${items.length * 2 * 250}px`,
   };
 
   return (

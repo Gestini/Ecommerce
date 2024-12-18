@@ -1,5 +1,5 @@
 import React from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { MdMenu } from "react-icons/md";
 import "./Navbar.scss";
 import { GestinyLogo } from "../../assets/Logo";
 
@@ -25,36 +25,24 @@ const Navbar = ({ openModal }: any) => {
 
   return (
     <>
-      <div className={`navbar--landing flex w-[100%] animation ${isScrolled ? 'navbarWrapper' : 'bg-[#fbfbfb]'} z-20 justify-center mx-auto gap-4 items-center py-[15px] sticky top-0 left-0`}>
-        <div className="navbarmedio flex w-[80%]">
+      <div className={`navbar--landing flex w-[100%] animation ${isScrolled ? 'navbarWrapper' : 'bg-[#fbfbfb]'} z-20 justify-center mx-auto gap-4 items-center p-[15px] sticky top-0 left-0 `}>
+        <div className="flex justify-between w-full items-center max-w-[80%]">
+          <MdMenu className=" sm:hidden flex  text-[35px]" />
           <div className="izq-navbar--landing flex ">
             <div className="logo--landing">
               <GestinyLogo />
             </div>
           </div>
-          <div className="items-navbar--landing flex flex-grow px-[50px] gap-4 ">
-            {/* <div className="cursor-pointer gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] text-[14px]">Soluciones</span>
-              <IoIosArrowDown />
-            </div>
-            <div className="cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] text-[14px]">Descargar</span>
-            </div>
-            <div className="cursor-pointer gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] text-[14px]">Equipo</span>
-            </div>
-            <div className="cursor-pointer gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] text-[14px] ">Centro de ayuda</span>
-            </div>
-            <div className="cursor-pointer  gap-2 flex justify-center items-center text-[#9b9b9b]">
-              <span className=" font-[500] text-[14px]">Precios</span>
-            </div> */}
-          </div>
-          <div className="der-navbar--landing w-[300px] flex items-center justify-between  h-full gap-4 ">
-
+          <div className="hidden sm:flex items-center justify-between h-full gap-[14px] ">
             <button
               onClick={openModal}
-              className=" buttontypesbussines"
+              className='block text-[rgba(10,11,10,0.4)] px-[20px] font-medium py-[10px]'
+            >
+              Iniciar Sesion
+            </button>
+            <button
+              onClick={openModal}
+              className="buttontypesbussines"
             >
               Empieza gratis
               <div className="shine-effect"></div>

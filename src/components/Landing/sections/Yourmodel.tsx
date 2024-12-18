@@ -51,7 +51,7 @@ const Yourmodel: FC<YourmodelProps> = ({ openModal }) => {
   console.log(selectedCard)
 
   return (
-    <div className="divcontainersection min-h-screen items-center flex-col gap-[64px] mx-auto flex bg-[#FAFAFA]">
+    <div className="divcontainersection min-h-screen items-center flex-col gap-[64px] mx-auto flex bg-[#FAFAFA] pb-[70px]">
       <div
         id="modelosempresariales"
         className="section flex flex-col gap-[40px] w-full min-h-screen max-w-[80%] mx-auto"

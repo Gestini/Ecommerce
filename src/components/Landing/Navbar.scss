@@ -1,18 +1,4 @@
 @media (max-width: 1150px) {
-  .items-navbar--landing {
-    display: none !important;
-  }
-
-  .navbarmedio {
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 700px) {
-  .navbarmedio {
-    width: 100% !important;
-  }
-
   .navbar--landing {
     padding-left: 25px !important;
     padding-right: 25px !important;
@@ -23,9 +9,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -39,11 +27,16 @@
     width: 400px;
     height: 400px;
   }
+
   100% {
-    top: 15px; /* Ajusta según la posición del navbar */
-    left: 20px; /* Ajusta según la posición del navbar */
-    width: 100px; /* Tamaño del logo en el navbar */
-    height: 100px; /* Tamaño del logo en el navbar */
+    top: 15px;
+    /* Ajusta según la posición del navbar */
+    left: 20px;
+    /* Ajusta según la posición del navbar */
+    width: 100px;
+    /* Tamaño del logo en el navbar */
+    height: 100px;
+    /* Tamaño del logo en el navbar */
   }
 }
 
@@ -55,7 +48,8 @@
   opacity: 0.5;
   left: 0;
   top: 0;
-  z-index: 9999; /* Asegura que esté sobre otros elementos */
+  z-index: 9999;
+  /* Asegura que esté sobre otros elementos */
 }
 
 .loader-logo-svg {

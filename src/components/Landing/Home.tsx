@@ -33,7 +33,13 @@ const Home = ({ openModal }: any) => {
       alt: "Image 3",
     },
     {
-      src: "supplier2",
+      src: "supplier5",
+      height: "100",
+      width: "200",
+      alt: "Image 3",
+    },
+    {
+      src: "supplier7",
       height: "100",
       width: "200",
       alt: "Image 3",
@@ -87,7 +93,7 @@ const Home = ({ openModal }: any) => {
           <IoMdArrowDropright />
           <span>Infraestructura Segura e Innovadora</span>
         </div>
-        <div className="sliderinfraestructura-landing ">
+        <div className="sliderinfraestructura-landing">
           <SliderEmprendedores images={imageList} />
         </div>
       </div>

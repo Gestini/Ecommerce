@@ -1,48 +1,48 @@
 import React from "react";
-import { AiFillInstagram  } from "react-icons/ai";
+import { AiFillInstagram, AiFillTikTok } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import "./Footer.scss";
 import Gestini from "../../../assets/Logos/Gestini.png";
 import { GestinyLogo } from "@/assets/Logo";
 
 const Footer = () => {
   // Datos internos del componente
   const socialLinks = [
-    { url: "https://www.instagram.com/gestiniok", icon: <AiFillInstagram  /> },
+    { url: "https://www.instagram.com/gestiniok", icon: <AiFillInstagram /> },
+    { url: "https://www.tiktok.com/@gestiniokk", icon: <AiFillTikTok /> },
   ];
 
-  const menuItems = [
-    { text: "Herramientas", url: "#herramientas" },
-    { text: "Caracteristicas", url: "#caracteristicas" },
-    { text: "Modelos Empresariales", url: "#modelosempresariales" },
-    { text: "Planer", url: "/planner" },
-  ];
+  // const menuItems = [
+  //   { text: "Herramientas", url: "#herramientas" },
+  //   { text: "Caracteristicas", url: "#caracteristicas" },
+  //   { text: "Modelos Empresariales", url: "#modelosempresariales" },
+  //   { text: "Planer", url: "/planner" },
+  // ];
 
-  const helpItems = [
-    { text: "Ayuda", url: "/help" },
-    { text: "Atención al cliente", url: "/customer-service" },
-    { text: "Términos y condiciones", url: "/terms" },
-    { text: "Política de privacidad", url: "/privacy" },
-  ];
+  // const helpItems = [
+  //   { text: "Ayuda", url: "/help" },
+  //   { text: "Atención al cliente", url: "/customer-service" },
+  //   { text: "Términos y condiciones", url: "/terms" },
+  //   { text: "Política de privacidad", url: "/privacy" },
+  // ];
 
-  const otherItems = [
-    { text: "Contacto", url: "/contact" },
-    { text: "Sobre nosotros", url: "/about" },
-    { text: "Blog", url: "/blog" },
-    { text: "Carreras", url: "/careers" },
-  ];
+  // const otherItems = [
+  //   { text: "Contacto", url: "/contact" },
+  //   { text: "Sobre nosotros", url: "/about" },
+  //   { text: "Blog", url: "/blog" },
+  //   { text: "Carreras", url: "/careers" },
+  // ];
 
   const description =
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eum alias iusto quidem eaque voluptates vero dolore veritatis repudiandae at.";
+    "Somos expertos en desarrollo de software, enfocados en transformar cómo emprendedores y pymes gestionan sus negocios. Ofrecemos soluciones innovadoras para optimizar procesos y fomentar el crecimiento. Nos posicionamos como aliados estratégicos en LATAM, brindando herramientas avanzadas que permiten a las empresas escalar y destacar en un mercado competitivo, siempre pensando en el futuro.";
 
-  const copyright = "© Copyright 2024, All Rights Reserved by Gestini LLC";
+  const copyright ='© Copyright 2024, Todos los derechos reservados Gestini LLC';
 
   return (
-    <div className="footer--landing bg-[#FAFAFA] px-[100px] py-[100px] w-full flex flex-col">
-      <div className="topfooter-landing px-[100px] border-b-1 pb-[50px] border-[#70C955] flex w-full justify-between">
-        <div className="sectionlogofooter-landing w-full max-w-[365px] flex flex-col gap-[32px]">
+    <div className="bg-[#FAFAFA] px-[70px] py-[70px] w-full flex flex-col border-t border-gray-100">
+      <div className=" border-b-1 pb-[44px] border-[#70C955] flex w-full justify-center">
+        <div className="w-full items-center flex flex-col gap-[32px] max-w-[1200px]">
           <GestinyLogo />
-          <p className="descriptionfooter-landing font-Figtree text-[#929AA7]">
+          <p className="font-Figtree text-[#929AA7] text-center">
             {description}
           </p>
           <div className="redesfooter-landing text-[25px] text-[#929AA7] flex gap-[20px]">
@@ -58,34 +58,8 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="columnfooter-landing flex gap-[110px]">
-          <div className="colinfofooter-landing flex flex-col font-Figtree gap-5 text-[#929AA7]">
-            <h6 className="font-[600]">Menú</h6>
-            {menuItems.map((item, index) => (
-              <a key={index} href={item.url}>
-                <p>{item.text}</p>
-              </a>
-            ))}
-          </div>
-          <div className="colinfofooter-landing flex flex-col font-Figtree gap-5 text-[#929AA7]">
-            <h6 className="font-[600]">Ayuda</h6>
-            {helpItems.map((item, index) => (
-              <Link key={index} to={item.url}>
-                <p>{item.text}</p>
-              </Link>
-            ))}
-          </div>
-          <div className="colinfofooter-landing flex flex-col gap-5 font-Figtree text-[#929AA7]">
-            <h6 className="font-[600]">Otros</h6>
-            {otherItems.map((item, index) => (
-              <Link key={index} to={item.url}>
-                <p>{item.text}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
       </div>
-      <div className="bottomfooter-landing w-full flex justify-center items-center text-[14px] text-[#929AA7] py-[40px]">
+      <div className="bottomfooter-landing w-full flex justify-center items-center text-[14px] text-[#929AA7] py-[44px]">
         {copyright}
       </div>
     </div>

@@ -94,10 +94,7 @@
     width: 700px !important;
   }
 
-  .containermiddle-landing {
-    margin-top: -150px !important;
-    gap: 0 !important;
-  }
+
 
   .Emprendedoresempresarios-landing {
     gap: 10px !important;
@@ -160,17 +157,16 @@
   }
 
   .containermiddle-landing {
-    gap: 50px !important;
+    gap: 30px !important;
+  }
+  .bottomcontainer-landing {
+    bottom: 150px !important;
   }
 }
 
 /* Estilos para pantallas con un ancho máximo de 500px */
 @media (max-width: 500px) {
   .Emprendedoresempresarios-landing {
-    display: none !important;
-  }
-
-  .bottomcontainer-landing {
     display: none !important;
   }
 
@@ -192,7 +188,7 @@
   }
 
   .containermiddle-landing {
-    gap: 100px !important;
+    gap: 30px !important;
   }
 
   .bottomiddle-landing {
