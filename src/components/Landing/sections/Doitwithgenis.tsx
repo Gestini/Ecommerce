@@ -13,7 +13,7 @@ const Doitwithgenis = () => {
           </button>
         </div>
         <h2 className="titlesectionh2 text-center font-[700] text-[48px] blurAnimation">
-          Automatiza tu negocio con<span className=" text-[#70C955] "> Intelgencia artificial</span>
+          Automatiza tu negocio con<span className=" text-[#70C955] "> Inteligencia Artificial</span>
         </h2>
       </div>
       <div className=" bg-[#FAFAFA] h-[50vh] flex justify-center items-center ">
