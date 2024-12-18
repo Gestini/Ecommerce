@@ -1,58 +1,66 @@
-import React from "react";
 import { AiFillThunderbolt } from "react-icons/ai";
-import { BsAsterisk } from "react-icons/bs";
+import {
+  MdAttachMoney,
+  MdBusiness,
+  MdCloud,
+  MdGroup,
+  MdInventory,
+  MdStore,
+} from "react-icons/md";
 import "./Whoweare.scss";
 
 const Whoweare = () => {
   const cards = [
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdBusiness className="text-gray-500 text-[30px]" />,
+      title: "Empresas y Sucursales",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Administra varias empresas y sucursales desde una sola cuenta con cambio rápido entre ellas.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdStore className="text-gray-500 text-[30px]" />,
+      title: "Puntos de Venta",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Crea y gestiona puntos de venta personalizados para cada sucursal, optimizando tus operaciones.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdCloud className="text-gray-500 text-[30px]" />,
+      title: "Gestión flexible",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Administra tu negocio desde cualquier lugar con toda la información almacenada de manera segura en la nube.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdGroup className="text-gray-500 text-[30px]" />,
+      title: "Multisesiones Locales",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Cambia entre sesiones de forma rápida y segura en una sola máquina, ideal para múltiples usuarios.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdInventory className="text-gray-500 text-[30px]" />,
+      title: "Stock y Almacenes",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Controla inventarios en tiempo real y gestiona múltiples almacenes de manera eficiente.",
     },
     {
-      icon: <BsAsterisk className="text-[#a6a6a6]" />,
-      title: "Flexibilidad",
+      icon: <MdAttachMoney className="text-gray-500 text-[30px]" />,
+      title: "Facturación y Ventas",
       description:
-        "Gestiona tu proyecto, empresa independientemente del tipo de empresa, podrás administrar desde una startup hasta una distribuidora.",
+        "Automatiza facturación y maneja ventas, generando informes financieros precisos.",
     },
-    // Agrega más objetos de cartas aquí
   ];
   return (
     <div className="divcontainersection min-h-screen items-center  flex-col gap-[64px] mx-auto flex  bg-[#FAFAFA] ">
-      <div className="section min-h-screen flex flex-col gap-[64px] w-full max-w-[80%]  mx-auto ]  ">
+      <div
+        id="caracteristicas"
+        className="section min-h-screen flex flex-col gap-[40px] w-full max-w-[80%]  mx-auto ]  "
+      >
         <div className="titlesection w-full flex flex-col gap-[20px] justify-center items-center ">
           <div className="buttonsecttionname w-full justify-center flex">
-            <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] ">
+            <button className=" flex gap-2 w-auto px-[10px] py-[2px] rounded-full  items-center text-[#a6a6a6] border-1 border-[#a6a6a6] blurAnimation">
               <AiFillThunderbolt /> Caracteristicas
             </button>
           </div>
-          <h2 className="titlesectionh2 text-center font-[700] text-[48px] ">
+          <h2 className="titlesectionh2 text-center font-[700] text-[48px] blurAnimation">
             Porque somos los <span className=" text-[#70C955] "> mejores!</span>
           </h2>
         </div>
@@ -60,7 +68,7 @@ const Whoweare = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="cardcaracterist mx-auto w-[350px] flex flex-col gap-4 p-4 rounded-lg px-[36px] py-[20px]  "
+              className={`apearanimation cardcaracterist mx-auto w-[350px] flex flex-col gap-4 p-4 rounded-lg px-[36px] py-[20px]`}
             >
               <div className="w-[60px] h-[60px] flex justify-center bg-[#E0EDFA] rounded-lg items-center">
                 {card.icon}

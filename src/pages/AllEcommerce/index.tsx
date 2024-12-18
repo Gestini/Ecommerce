@@ -30,7 +30,7 @@ const index = () => {
                             <span><strong>Nombre: </strong>{shop?.name}</span>
                             <p><strong>Descripción: </strong>{shop?.description}</p>
                             <p><strong>Web: </strong>
-                                <a href={shop?.link} className='text-blue-500 underline'>
+                                <a href={`/store/${shop?.link}`} className='text-blue-500 underline'>
                                     {shop?.link}
                                 </a>
                             </p>

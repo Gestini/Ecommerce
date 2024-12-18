@@ -9,16 +9,22 @@ import Navbar from '../../components/Navbar';
 import Product from '../../components/Product';
 import Whatsapp from '../../components/Whatsapp';
 import './Ecommerce.scss';
+import { reqGetUnitsByEcommerce } from '@/api/requests';
 
-interface EcommerceProps {
-  unit: Unit;
-}
 
-const Ecommerce: React.FC<EcommerceProps> = ({ unit }) => {
+const Ecommerce = () => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    dispatch(setUnit(unit));
+    const loadUserCompanies = async () => {
+      try {
+        const response = await reqGetUnitsByEcommerce();
+        dispatch(setUnit(response.data));
+      } catch (error) {
+        console.error('Error fetching business units:', error);
+      }
+    };
+    loadUserCompanies();
   }, []);
 
   return (
